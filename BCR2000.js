@@ -1,5 +1,9 @@
 /* 
 
+- All encoders are CC, REL2
+- All buttons are Note, tOff
+- All LED feedback is done by Mixxx, BCR2000 itself doesn't decide that.
+
 Layout:
 
 ---- Globals   -----
@@ -26,37 +30,37 @@ B     Position
 C     Key
 D     Move beatgrid (beats_translate) / output phase??
   <> (press)  
-0     Gain
+0     Scratch
 A     Reset rate
-B     Scratch
-C     Quantize on/off
-D  
+B     
+C     Reset key
+D     Quantize on/off
   []                  []
 0 FX1                 FX2
 A Cue 1               Cue 2
 B Load                Sync
-C Jump <1             Jump >1
+C Jump <4             Jump >4
 D Loop *2             Loop /2
   []                  []
 0 FX3                 Loop act / set 4 bars
 A Cue 3               Cue 4
 B Play                PFL
 C Jump <4             Jump >4
-D Jump <16            Jump >16            
+D Jump <1             Jump >1
   <>                  <>
-0 High                Filter
-A Move loop 
-B  
+0 Volume              High
+A Gain
+B Move loop  
 C
 D  
   <>                  <>
-0 Mid                 Volume
+0 Filter              Mid
 A  
 B  
 C
 D  
   <>                  <>
-0 Low                 
+0                     Low
 A  
 B  
 C
@@ -64,6 +68,7 @@ D
 
 - Consider A -> B to activate another shift level for cues 5..8
   and for sync master
+- Blink VU meter (FAST), or all 4 buttons, or ... when nearing end of track
 */
 
 
@@ -79,10 +84,11 @@ function withDefaults(settings, defaults) {
 function getCfg(key) {
     var keyInfo = {
       rate: { minimum: -1, maximum: 1 },
-      jog: { minimum: -3, maximum: 3, step: 0.1, accellerationLimit: 30 },
+      jog: { minimum: -3, maximum: 3, step: 0.1, accellerationLimit: 30, accelleration: 1.1 },
       playposition: { step: 0.0003, accellerationLimit: 50 },
       beats_translate: { step: 1, accelleration: 2, up: "beats_translate_later", down: "beats_translate_earlier"},
-      pitch: { minimum: -6, maximum: 6, step: 0.01, accelleration: 1.1 }
+      pitch: { minimum: -6, maximum: 6, step: 0.01, accelleration: 1.1 },
+      scratch: { step: 1, accelleration: 2, accellerationLimit: 4 }
     };
     
     return withDefaults(keyInfo[key], {
@@ -90,7 +96,9 @@ function getCfg(key) {
         accelleration: 1.2,
         accellerationLimit: 10,
         minimum: 0,
-        maximum: 1
+        maximum: 1,
+        up: undefined,
+        down: undefined
     });
 }
 
@@ -114,7 +122,11 @@ function encoder(key) {
         
         lastMsg = new Date().getTime();
         var delta = (value > 64) ? cfg.step : -cfg.step;
-        if (delta > 0 && cfg.up !== undefined) {
+        if (key == "scratch") { // scratch must be done through JS...for some reason
+          var deck = group[8] - '1' + 1;
+          script.midiDebug(0, 0, value, 0, "scratch: " + delta * accel);
+          engine.scratchTick(deck, delta * accel);
+        } else if (delta > 0 && cfg.up !== undefined) {
           engine.setValue(group, cfg.up, true);
           engine.setValue(group, cfg.up, false);          
         } else if (delta < 0 && cfg.down !== undefined) {
@@ -127,6 +139,58 @@ function encoder(key) {
           script.midiDebug(0, 0, v, 0, "writing to " + group + ":" + key + "=" + v + " accel=" + accel);
           engine.setValue(group, key, v);
         }
+    };
+}
+
+function encoderScratch() {
+    return function (channel, control, value, status, group) {
+        var deck = group[8] - '1' + 1;
+        engine.scratchTick(deck, value > 64 ? 1 : -1);
+    }
+}
+
+function buttonScratch() {
+    return function (channel, control, value, status, group) {
+        var deck = group[8] - '1' + 1;
+        if (value > 0) {
+          var alpha = 0.01;
+          var beta = alpha/16;
+          engine.scratchEnable(deck, 64, 33+1/3, alpha, beta);
+        } else {    // If button up
+          engine.scratchDisable(deck);        
+        }
+    }    
+}
+
+function scratchMap(routes) {
+  return function (channel, control, value, status, group) {
+    var deck = group[8] - '1' + 1;
+    var target = routes[engine.isScratching(deck) ? 1 : 0];
+    if (target !== undefined) {
+      target.apply(null, arguments);
+    }
+  };
+}
+
+function buttonHold(key) {
+    return function (channel, control, value, status, group) {
+         engine.setValue(group, key, value > 0);
+    };
+}
+
+function buttonToggle(key) {
+    return function (channel, control, value, status, group) {
+         if (value > 0) {         
+             engine.setValue(group, key, !engine.getValue(group, key));
+         }
+    };
+}
+
+function buttonSet(key, valueOnPress) {
+    return function (channel, control, value, status, group) {
+         if (value > 0) {
+             engine.setValue(group, key, valueOnPress);         
+         }
     };
 }
 
@@ -162,7 +226,6 @@ function Shifter(levels) {
     // Should be bound to a button that emits the given value when held down,
     // returning to levels[0] when released.
     // In other words, holding the button sets the shifter to [targetValue] temporarily.
-    // On the BCR2000, this should be "tOff" button mode.
     this.holdFor = function(targetValue) {
         return function (channel, control, value, status, group) {
             var i = pressed.indexOf(targetValue);
@@ -186,7 +249,7 @@ function Shifter(levels) {
     // Shortcut for holdFor("on"), for a default Shifter with [ "off", "on" ]
     this.hold = function() { return this.holdFor("on"); }
     
-    // Serves as a router that invokes nested functions, depending on the current
+    // Serves as a router that invok=es nested functions, depending on the current
     // value of the shift button.
     this.map = function(routes) {
         return function() {
@@ -232,8 +295,27 @@ function Shifter(levels) {
     }
 }
 
+/*
+// Exposes reading an existing mixxx control in the same DSL as if it were a Shifter variable
+function Control(key) {
+    // Serves as a router that invokes nested functions, depending on the current
+    // boolean value of the control for the group it's invoked on. That value
+    // has to exist in [routes].
+    this.map = function(routes) {
+        return function(channel, control, value, status, group) {
+            var v = engine.getValue(group, key);
+            var target = routes[v];
+            if (target !== undefined) {
+                target.apply(null, arguments);
+            }
+        };
+    };
+}
+*/
+
 var BCR2000 = (function () {
     var shift1 = new Shifter(["o","a","b","c","d"]);
+    //var scratch2_enable = new Control("scratch2_enable");
 
     function pushEncoder1Out(group) {
         return {
@@ -247,14 +329,26 @@ var BCR2000 = (function () {
     return {
         init: function (id, debugging) {
           shift1.connectCC(0x27, pushEncoder1Out("[Channel1]"));
+          shift1.connectCC(0x29, pushEncoder1Out("[Channel2]"));
+          shift1.connectCC(0x2B, pushEncoder1Out("[Channel3]"));
+          shift1.connectCC(0x2D, pushEncoder1Out("[Channel4]"));
         },
         shutdown: function() {},
         pushEncoder1: shift1.map({
-            o: encoder("jog"),
+            o: scratchMap({
+                0: encoder("jog"),
+                1: encoder("scratch") 
+            }),
             a: encoder("rate"),
             b: encoder("playposition"),
             c: encoder("pitch"),
             d: encoder("beats_translate")
+        }),
+        pushEncoder1Btn: shift1.map({
+            o: buttonScratch(), 
+            a: buttonSet("rate", 0.0),
+            c: buttonSet("pitch", 0.0),
+            d: buttonToggle("quantize")
         }),
         shiftA: shift1.holdFor("a"),
         shiftB: shift1.holdFor("b"),
