@@ -42,17 +42,17 @@ D     Quantize on/off
 A Cue 1               Cue 2
 B Load                Sync
 C Jump <4             Jump >4
-D Loop *2             Loop /2
+D Loop 4              Loop 16
   []                  []
-0 FX3                 Loop act / set 4 bars
+0 FX3                 Loop act
 A Cue 3               Cue 4
 B Play                PFL
-C Jump <4             Jump >4
+C Jump <16            Jump >16
 D Jump <1             Jump >1
   <>                  <>
 0 Volume              High
 A Gain
-B Move loop  
+B Move loop           Size loop (/2, *2)
 C
 D  
   <>                  <>
@@ -85,7 +85,7 @@ function withDefaults(settings, defaults) {
 
 function getCfg(key) {
     var keyInfo = {
-      rate: { minimum: -1, maximum: 1 },
+      rate: { minimum: -1, maximum: 1, step: 0.001 },
       jog: { minimum: -3, maximum: 3, step: 0.1, accellerationLimit: 30, accelleration: 1.1 },
       playposition: { step: 0.0003, accellerationLimit: 50 },
       beats_translate: { step: 1, accelleration: 2, up: "beats_translate_later", down: "beats_translate_earlier"},
@@ -193,6 +193,7 @@ function Shifter(levels) {
     var currentValue = levels[0];
     var connected = {};
     var pressed = []; // currently pressed values, which we'll return to when one is released.
+    var keys = {};
     
     function switchTo(v) {
       script.midiDebug(0, 0, v, 0, "switching to " + v);
@@ -236,48 +237,62 @@ function Shifter(levels) {
     
     // Serves as a router that invok=es nested functions, depending on the current
     // value of the shift button.
+    
     this.map = function(routes) {
-        return function() {
+        return function(channel, control, value, status, group) {
             var target = routes[currentValue];
             if (target !== undefined) {
                 target.apply(null, arguments);
+
+                // If releasing a button that has an output, re-trigger its value.
+                var key = keys["" + currentValue + control + status];
+                if (key !== undefined) {
+                    engine.trigger(group, key);
+                }
             }
         };
     };
     
-    function mkConnect(group, key) {
+    function createCallback(group, key) {
       var cfg = getCfg(key);
       engine.connectControl(group, key, function(value) {              
         var target = connected[group][key][currentValue];
         //script.midiDebug(0, 0, value, 0, "hit " + group + ":" + key + ", current=" + currentValue + " target=" + target + " p=" + connected[group][key]);
         
         if (target === undefined) return;
-        if (target.cc !== undefined) {
-          //script.midiDebug(0, 0, value, 0, "updating " + group + ":" + key);
-          midi.sendShortMsg(0xB0, target.cc, (value - cfg.minimum) / (cfg.maximum - cfg.minimum) * 127);              
-        }
+        midi.sendShortMsg(target.status, target.control, (value - cfg.minimum) / (cfg.maximum - cfg.minimum) * 127);
       });      
     }
     
-    this.connectCC = function(cc, routes) {
-      for (targetValue in routes) {
-        var group = routes[targetValue].group;
-        var key = routes[targetValue].key;
-        script.midiDebug(0, 0, targetValue, 0, "handling " + group + ":" + key);
-        if (connected[group] === undefined) {
-          connected[group] = {};
+    function connect(midi, routes) {
+        for (targetValue in routes) {
+            var group = routes[targetValue].group;
+            var key = routes[targetValue].key;
+            script.midiDebug(0, 0, targetValue, 0, "handling " + group + ":" + key);
+            if (connected[group] === undefined) {
+              connected[group] = {};
+            }
+            if (connected[group][key] === undefined) {
+              connected[group][key] = {};
+              script.midiDebug(0, 0, targetValue, 0, "binding " + group + ":" + key);
+              createCallback(group, key);
+            } else {
+              script.midiDebug(0, 0, targetValue, 0, "already bound " + group + ":" + key);
+            }
+            connected[group][key][targetValue] = midi;
+            keys["" + targetValue + midi.control + midi.status] = key;
+            script.midiDebug(0, 0, targetValue, 0, "done " + group + ":" + key + " for " + targetValue);        
         }
-        if (connected[group][key] === undefined) {
-          connected[group][key] = {};
-          script.midiDebug(0, 0, targetValue, 0, "binding " + group + ":" + key);
-          mkConnect(group, key);
-        } else {
-          script.midiDebug(0, 0, targetValue, 0, "already bound " + group + ":" + key);
-        }
-        connected[group][key][targetValue] = { cc: cc };
-        script.midiDebug(0, 0, targetValue, 0, "done " + group + ":" + key + " for " + targetValue);        
-      }
+    
     }
+    
+    this.connectCC = function(cc, routes) {
+        connect({status: 0xB0, control: cc}, routes);
+    }
+    
+    this.connectNote = function(note, routes) {
+        connect({status: 0x90, control: note}, routes);
+    }    
 }
 
 
@@ -318,6 +333,34 @@ var BCR2000 = (function () {
             c: { group: group, key:"pitch"}
         };
     }
+    
+    function button1Out(group) {
+        return {
+            a: { group: group, key:"hotcue_1_enabled" }
+        };
+    }
+
+    function button2Out(group) {
+        return {
+            a: { group: group, key:"hotcue_2_enabled" },
+            b: { group: group, key:"beatsync" }        
+        };
+    }
+
+    function button3Out(group) {
+        return {
+            a: { group: group, key:"hotcue_3_enabled" },        
+            b: { group: group, key:"play_indicator" }                
+        };
+    }
+
+    function button4Out(group) {
+        return {
+            o: { group: group, key:"loop_enabled" },                            
+            a: { group: group, key:"hotcue_4_enabled" },        
+            b: { group: group, key:"pfl" }                            
+        };
+    }
 
     return {
         init: function (id, debugging) {
@@ -325,8 +368,31 @@ var BCR2000 = (function () {
           shift1.connectCC(0x29, pushEncoder1Out("[Channel2]"));
           shift1.connectCC(0x2B, pushEncoder1Out("[Channel3]"));
           shift1.connectCC(0x2D, pushEncoder1Out("[Channel4]"));
+          
+          shift1.connectNote(0x00, button1Out("[Channel1]"));
+          shift1.connectNote(0x01, button2Out("[Channel1]"));
+          shift1.connectNote(0x02, button1Out("[Channel2]"));
+          shift1.connectNote(0x03, button2Out("[Channel2]"));
+          shift1.connectNote(0x04, button1Out("[Channel3]"));
+          shift1.connectNote(0x05, button2Out("[Channel3]"));
+          shift1.connectNote(0x06, button1Out("[Channel4]"));
+          shift1.connectNote(0x07, button2Out("[Channel4]"));
+          shift1.connectNote(0x08, button3Out("[Channel1]"));
+          shift1.connectNote(0x09, button4Out("[Channel1]"));
+          shift1.connectNote(0x0A, button3Out("[Channel2]"));
+          shift1.connectNote(0x0B, button4Out("[Channel2]"));
+          shift1.connectNote(0x0C, button3Out("[Channel3]"));
+          shift1.connectNote(0x0D, button4Out("[Channel3]"));
+          shift1.connectNote(0x0E, button3Out("[Channel4]"));
+          shift1.connectNote(0x0F, button4Out("[Channel4]"));
         },
         shutdown: function() {},
+        
+        shiftA: shift1.holdFor("a"),
+        shiftB: shift1.holdFor("b"),
+        shiftC: shift1.holdFor("c"),
+        shiftD: shift1.holdFor("d"),
+        
         pushEncoder1: shift1.map({
             o: scratch_enable.map({
                 off: encoder("jog"),
@@ -343,10 +409,36 @@ var BCR2000 = (function () {
             c: buttonSet("pitch", 0.0),
             d: buttonToggle("quantize")
         }),
-        shiftA: shift1.holdFor("a"),
-        shiftB: shift1.holdFor("b"),
-        shiftC: shift1.holdFor("c"),
-        shiftD: shift1.holdFor("d")
+        
+        button1: shift1.map({
+            //o: buttonToggle("fx1:enabled")
+            a: buttonHold("hotcue_1_activate"),
+            b: buttonToggle("LoadSelectedTrack"),
+            c: buttonHold("beatjump_4_backward"),
+            d: buttonHold("beatloop_4_activate")
+        }),
+        button2: shift1.map({
+            //o: buttonToggle("fx2:enabled")
+            a: buttonHold("hotcue_2_activate"),
+            b: buttonToggle("beatsync"),
+            c: buttonHold("beatjump_4_forward"),
+            d: buttonHold("beatloop_16_activate")
+        }),
+        button3: shift1.map({
+            //o: buttonToggle("fx3:enabled")
+            a: buttonHold("hotcue_3_activate"),
+            b: buttonToggle("play"),
+            c: buttonHold("beatjump_16_backward"),
+            d: buttonHold("beatjump_1_backward")
+        }),
+        button4: shift1.map({
+            o: buttonHold("reloop_exit"), // TODO create new loop if not inside loop points
+            a: buttonHold("hotcue_4_activate"),
+            b: buttonToggle("pfl"),
+            c: buttonHold("beatjump_16_forward"),
+            d: buttonHold("beatjump_1_forward")
+        })
+        
     };
 })();
 
