@@ -3,6 +3,8 @@
 - All encoders are CC, REL2
 - All buttons are Note, tOff
 - All LED feedback is done by Mixxx, BCR2000 itself doesn't decide that.
+- This JS introduces fake controls "scratch" and "scratch_enable" that work as expected,
+  instead of having to do the explicit JS scratch stuff the wiki mentions.
 
 Layout:
 
@@ -142,40 +144,23 @@ function encoder(key) {
     };
 }
 
-function encoderScratch() {
-    return function (channel, control, value, status, group) {
-        var deck = group[8] - '1' + 1;
-        engine.scratchTick(deck, value > 64 ? 1 : -1);
-    }
-}
-
-function buttonScratch() {
-    return function (channel, control, value, status, group) {
-        var deck = group[8] - '1' + 1;
-        if (value > 0) {
-          var alpha = 0.01;
-          var beta = alpha/16;
-          engine.scratchEnable(deck, 64, 33+1/3, alpha, beta);
-        } else {    // If button up
-          engine.scratchDisable(deck);        
-        }
-    }    
-}
-
-function scratchMap(routes) {
-  return function (channel, control, value, status, group) {
-    var deck = group[8] - '1' + 1;
-    var target = routes[engine.isScratching(deck) ? 1 : 0];
-    if (target !== undefined) {
-      target.apply(null, arguments);
-    }
-  };
-}
-
 function buttonHold(key) {
-    return function (channel, control, value, status, group) {
-         engine.setValue(group, key, value > 0);
-    };
+    if (key == "scratch_enable") { // scratch has to be done through JS...for some reason
+        return function (channel, control, value, status, group) {
+            var deck = group[8] - '1' + 1;
+            if (value > 0) {
+              var alpha = 0.01;
+              var beta = alpha/16;
+              engine.scratchEnable(deck, 64, 33+1/3, alpha, beta);
+            } else {
+              engine.scratchDisable(deck);        
+            }
+        }
+    } else {
+        return function (channel, control, value, status, group) {
+            engine.setValue(group, key, value > 0);
+        };
+    }
 }
 
 function buttonToggle(key) {
@@ -295,15 +280,24 @@ function Shifter(levels) {
     }
 }
 
-/*
+
 // Exposes reading an existing mixxx control in the same DSL as if it were a Shifter variable
 function Control(key) {
+    function getValue(group) {
+        if (key == "scratch_enable") {
+          var deck = group[8] - '1' + 1;
+          return engine.isScratching(deck) ? "on" : "off";
+        } else {
+          return engine.getValue(group, key);
+        }
+    }
+
     // Serves as a router that invokes nested functions, depending on the current
-    // boolean value of the control for the group it's invoked on. That value
+    // value of the control for the group it's invoked on. That value
     // has to exist in [routes].
     this.map = function(routes) {
         return function(channel, control, value, status, group) {
-            var v = engine.getValue(group, key);
+            var v = getValue(group);
             var target = routes[v];
             if (target !== undefined) {
                 target.apply(null, arguments);
@@ -311,11 +305,10 @@ function Control(key) {
         };
     };
 }
-*/
 
 var BCR2000 = (function () {
     var shift1 = new Shifter(["o","a","b","c","d"]);
-    //var scratch2_enable = new Control("scratch2_enable");
+    var scratch_enable = new Control("scratch_enable");
 
     function pushEncoder1Out(group) {
         return {
@@ -335,9 +328,9 @@ var BCR2000 = (function () {
         },
         shutdown: function() {},
         pushEncoder1: shift1.map({
-            o: scratchMap({
-                0: encoder("jog"),
-                1: encoder("scratch") 
+            o: scratch_enable.map({
+                off: encoder("jog"),
+                 on: encoder("scratch")
             }),
             a: encoder("rate"),
             b: encoder("playposition"),
@@ -345,7 +338,7 @@ var BCR2000 = (function () {
             d: encoder("beats_translate")
         }),
         pushEncoder1Btn: shift1.map({
-            o: buttonScratch(), 
+            o: buttonHold("scratch_enable"), 
             a: buttonSet("rate", 0.0),
             c: buttonSet("pitch", 0.0),
             d: buttonToggle("quantize")
