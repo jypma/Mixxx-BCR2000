@@ -7,6 +7,105 @@
         </scriptfiles>
         <controls>
             <control>
+                <group>[Channel3]</group>
+                <key>BCR2000.button3</key>
+                <status>0x90</status>
+                <midino>0x0C</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>BCR2000.encoder4</key>
+                <status>0xB0</status>
+                <midino>0x09</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>BCR2000.encoder5</key>
+                <status>0xB0</status>
+                <midino>0x14</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>BCR2000.shiftC</key>
+                <status>0x90</status>
+                <midino>0x3E</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>BCR2000.button1</key>
+                <status>0x90</status>
+                <midino>0x06</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>BCR2000.pushEncoder1Btn</key>
+                <status>0x90</status>
+                <midino>0x2D</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>BCR2000.encoder2</key>
+                <status>0xB0</status>
+                <midino>0x03</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Global]</group>
+                <key>BCR2000.globalPushEncoder2</key>
+                <status>0xB0</status>
+                <midino>0x2A</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>BCR2000.encoder3</key>
+                <status>0xB0</status>
+                <midino>0x0E</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>BCR2000.button1</key>
+                <status>0x90</status>
+                <midino>0x00</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>BCR2000.pushEncoder1Btn</key>
+                <status>0x90</status>
+                <midino>0x27</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
                 <group>[Channel2]</group>
                 <key>BCR2000.button4</key>
                 <status>0x90</status>
@@ -17,18 +116,63 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>BCR2000.shiftA</key>
-                <status>0x90</status>
-                <midino>0x3C</midino>
+                <key>BCR2000.encoder3</key>
+                <status>0xB0</status>
+                <midino>0x08</midino>
                 <options>
                     <script-binding/>
                 </options>
             </control>
             <control>
-                <group>[Global]</group>
-                <key>BCR2000.globalPushEncoder4</key>
+                <group>[Channel2]</group>
+                <key>BCR2000.encoder6</key>
                 <status>0xB0</status>
-                <midino>0x2E</midino>
+                <midino>0x13</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>BCR2000.shiftB</key>
+                <status>0x90</status>
+                <midino>0x3D</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>BCR2000.button2</key>
+                <status>0x90</status>
+                <midino>0x05</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>BCR2000.encoder1</key>
+                <status>0xB0</status>
+                <midino>0x02</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>BCR2000.pushEncoder1</key>
+                <status>0xB0</status>
+                <midino>0x29</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>BCR2000.encoder4</key>
+                <status>0xB0</status>
+                <midino>0x0D</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -44,9 +188,99 @@
             </control>
             <control>
                 <group>[Channel4]</group>
-                <key>BCR2000.pushEncoder1</key>
+                <key>BCR2000.encoder2</key>
                 <status>0xB0</status>
-                <midino>0x2D</midino>
+                <midino>0x07</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Global]</group>
+                <key>BCR2000.globalPushEncoder4</key>
+                <status>0xB0</status>
+                <midino>0x2E</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>BCR2000.shiftA</key>
+                <status>0x90</status>
+                <midino>0x3C</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>BCR2000.encoder5</key>
+                <status>0xB0</status>
+                <midino>0x12</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>BCR2000.button1</key>
+                <status>0x90</status>
+                <midino>0x04</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>BCR2000.pushEncoder1Btn</key>
+                <status>0x90</status>
+                <midino>0x2B</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>BCR2000.encoder2</key>
+                <status>0xB0</status>
+                <midino>0x01</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Global]</group>
+                <key>BCR2000.globalPushEncoder1</key>
+                <status>0xB0</status>
+                <midino>0x28</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>BCR2000.button4</key>
+                <status>0x90</status>
+                <midino>0x0F</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>BCR2000.encoder3</key>
+                <status>0xB0</status>
+                <midino>0x0C</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>BCR2000.encoder6</key>
+                <status>0xB0</status>
+                <midino>0x17</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -61,19 +295,82 @@
                 </options>
             </control>
             <control>
-                <group>[Global]</group>
-                <key>BCR2000.globalPushEncoder3</key>
+                <group>[Channel4]</group>
+                <key>BCR2000.encoder1</key>
                 <status>0xB0</status>
-                <midino>0x2C</midino>
+                <midino>0x06</midino>
                 <options>
                     <script-binding/>
                 </options>
             </control>
             <control>
                 <group>[Channel4]</group>
-                <key>BCR2000.pushEncoder1Btn</key>
-                <status>0x90</status>
+                <key>BCR2000.pushEncoder1</key>
+                <status>0xB0</status>
                 <midino>0x2D</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>BCR2000.encoder6</key>
+                <status>0xB0</status>
+                <midino>0x11</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>BCR2000.button2</key>
+                <status>0x90</status>
+                <midino>0x03</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>BCR2000.encoder1</key>
+                <status>0xB0</status>
+                <midino>0x00</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>BCR2000.pushEncoder1</key>
+                <status>0xB0</status>
+                <midino>0x27</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>BCR2000.button3</key>
+                <status>0x90</status>
+                <midino>0x0E</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>BCR2000.encoder4</key>
+                <status>0xB0</status>
+                <midino>0x0B</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>BCR2000.encoder5</key>
+                <status>0xB0</status>
+                <midino>0x16</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -89,62 +386,8 @@
             </control>
             <control>
                 <group>[Channel3]</group>
-                <key>BCR2000.pushEncoder1</key>
+                <key>BCR2000.encoder2</key>
                 <status>0xB0</status>
-                <midino>0x2B</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>BCR2000.button2</key>
-                <status>0x90</status>
-                <midino>0x07</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Global]</group>
-                <key>BCR2000.globalPushEncoder2</key>
-                <status>0xB0</status>
-                <midino>0x2A</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>BCR2000.pushEncoder1Btn</key>
-                <status>0x90</status>
-                <midino>0x2B</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>BCR2000.button1</key>
-                <status>0x90</status>
-                <midino>0x06</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>BCR2000.pushEncoder1</key>
-                <status>0xB0</status>
-                <midino>0x29</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>BCR2000.button2</key>
-                <status>0x90</status>
                 <midino>0x05</midino>
                 <options>
                     <script-binding/>
@@ -152,63 +395,18 @@
             </control>
             <control>
                 <group>[Global]</group>
-                <key>BCR2000.globalPushEncoder1</key>
+                <key>BCR2000.globalPushEncoder3</key>
                 <status>0xB0</status>
-                <midino>0x28</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>BCR2000.pushEncoder1Btn</key>
-                <status>0x90</status>
-                <midino>0x29</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>BCR2000.button1</key>
-                <status>0x90</status>
-                <midino>0x04</midino>
+                <midino>0x2C</midino>
                 <options>
                     <script-binding/>
                 </options>
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>BCR2000.pushEncoder1</key>
+                <key>BCR2000.encoder5</key>
                 <status>0xB0</status>
-                <midino>0x27</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>BCR2000.button2</key>
-                <status>0x90</status>
-                <midino>0x03</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>BCR2000.button4</key>
-                <status>0x90</status>
-                <midino>0x0F</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>BCR2000.pushEncoder1Btn</key>
-                <status>0x90</status>
-                <midino>0x27</midino>
+                <midino>0x10</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -223,28 +421,10 @@
                 </options>
             </control>
             <control>
-                <group>[Channel4]</group>
-                <key>BCR2000.button3</key>
+                <group>[Channel2]</group>
+                <key>BCR2000.pushEncoder1Btn</key>
                 <status>0x90</status>
-                <midino>0x0E</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>BCR2000.shiftD</key>
-                <status>0x90</status>
-                <midino>0x3F</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>BCR2000.button2</key>
-                <status>0x90</status>
-                <midino>0x01</midino>
+                <midino>0x29</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -259,37 +439,73 @@
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>BCR2000.shiftC</key>
-                <status>0x90</status>
-                <midino>0x3E</midino>
+                <group>[Channel2]</group>
+                <key>BCR2000.encoder3</key>
+                <status>0xB0</status>
+                <midino>0x0A</midino>
                 <options>
                     <script-binding/>
                 </options>
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>BCR2000.button1</key>
+                <key>BCR2000.shiftD</key>
                 <status>0x90</status>
-                <midino>0x00</midino>
+                <midino>0x3F</midino>
                 <options>
                     <script-binding/>
                 </options>
             </control>
             <control>
                 <group>[Channel3]</group>
-                <key>BCR2000.button3</key>
+                <key>BCR2000.encoder6</key>
+                <status>0xB0</status>
+                <midino>0x15</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>BCR2000.button2</key>
                 <status>0x90</status>
-                <midino>0x0C</midino>
+                <midino>0x07</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>BCR2000.encoder1</key>
+                <status>0xB0</status>
+                <midino>0x04</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>BCR2000.pushEncoder1</key>
+                <status>0xB0</status>
+                <midino>0x2B</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>BCR2000.encoder4</key>
+                <status>0xB0</status>
+                <midino>0x0F</midino>
                 <options>
                     <script-binding/>
                 </options>
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>BCR2000.shiftB</key>
+                <key>BCR2000.button2</key>
                 <status>0x90</status>
-                <midino>0x3D</midino>
+                <midino>0x01</midino>
                 <options>
                     <script-binding/>
                 </options>

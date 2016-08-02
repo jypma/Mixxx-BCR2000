@@ -1,5 +1,11 @@
 /* 
 
+OK fx
+- Bitcrusher : Bitdepth, Samplerate
+- Echo       : Send, Delay, Feedback, Pingpong
+- Reverb     : Bandwidth, Damping
++ Mix (Reverb is full-on)
+
 - All encoders are CC, REL2
 - All buttons are Note, tOff
 - All LED feedback is done by Mixxx, BCR2000 itself doesn't decide that.
@@ -30,11 +36,11 @@ D
 A     Rate
 B     Position
 C     Key
-D     Move beatgrid (beats_translate) / output phase??
+D     Move beatgrid (beats_translate) / beatgrid_active
   <> (press)  
 0     Scratch
 A     Reset rate
-B     
+B     Cue
 C     Reset key
 D     Quantize on/off
   []                  []
@@ -52,9 +58,9 @@ D Jump <1             Jump >1
   <>                  <>
 0 Volume              High
 A Gain
-B Move loop           Size loop (/2, *2)
+B 
 C
-D  
+D Move loop           Size loop (/2, *2) 
   <>                  <>
 0 Filter              Mid
 A  
@@ -87,10 +93,17 @@ function getCfg(key) {
     var keyInfo = {
       rate: { minimum: -1, maximum: 1, step: 0.001 },
       jog: { minimum: -3, maximum: 3, step: 0.1, accellerationLimit: 30, accelleration: 1.1 },
-      playposition: { step: 0.0003, accellerationLimit: 50 },
+      playposition: { step: 0.00003, accellerationLimit: 500 },
       beats_translate: { step: 1, accelleration: 2, up: "beats_translate_later", down: "beats_translate_earlier"},
       pitch: { minimum: -6, maximum: 6, step: 0.01, accelleration: 1.1 },
-      scratch: { step: 1, accelleration: 2, accellerationLimit: 4 }
+      scratch: { step: 1, accelleration: 2, accellerationLimit: 4 },
+      super1: { accelleration: 1.1 },
+      pregain: { maximum: 4 },
+      parameter1: { maximum: 4 },
+      parameter2: { maximum: 4 },
+      parameter3: { maximum: 4 },
+      loop_move: { minimum: -1, accelleration: 1.1 },
+      loop_factor2: { step: 1, accelleration: 0, up: "loop_double", down: "loop_halve" }
     };
     
     return withDefaults(keyInfo[key], {
@@ -104,10 +117,20 @@ function getCfg(key) {
     });
 }
 
+function eqForChannel(group) {
+    return "[EqualizerRack1_" + group + "_Effect1]";
+}
+
+function filterForChannel(group) {
+    return "[QuickEffectRack1_" + group + "]";
+}
+
 // This wraps the handling code for a BCR2000 encoder set to "Rel2" mode
 // @param key Mixxx control key to bind to, required
-// @param cfg Optional additional settings. See below.
-function encoder(key) {
+// @param groupFn Transformation to apply to group string
+function encoder(key, groupFn) {
+    if (groupFn === undefined) groupFn = function(s) { return s; };
+
     var cfg = getCfg(key);
     var accel = 1.0;
     var lastMsg = 0;
@@ -129,17 +152,28 @@ function encoder(key) {
           script.midiDebug(0, 0, value, 0, "scratch: " + delta * accel);
           engine.scratchTick(deck, delta * accel);
         } else if (delta > 0 && cfg.up !== undefined) {
-          engine.setValue(group, cfg.up, true);
-          engine.setValue(group, cfg.up, false);          
+          group = groupFn(group);
+          for (var i = 0; i < accel; i++) {
+            engine.setValue(group, cfg.up, true);
+            engine.setValue(group, cfg.up, false);                    
+          }
         } else if (delta < 0 && cfg.down !== undefined) {
-          engine.setValue(group, cfg.down, true);
-          engine.setValue(group, cfg.down, false);
+          group = groupFn(group);
+          for (var i = 0; i < accel; i++) {
+            engine.setValue(group, cfg.down, true);
+            engine.setValue(group, cfg.down, false);
+          }
         } else {
+          group = groupFn(group);
           var v = engine.getValue(group, key) + delta * accel;
           if (v < cfg.minimum) v = cfg.minimum;
           if (v > cfg.maximum) v = cfg.maximum;
           script.midiDebug(0, 0, v, 0, "writing to " + group + ":" + key + "=" + v + " accel=" + accel);
           engine.setValue(group, key, v);
+        }
+        
+        if (key == "loop_move") { // must be reset after each apply...
+          engine.setValue(group, key, 0);
         }
     };
 }
@@ -151,9 +185,11 @@ function buttonHold(key) {
             if (value > 0) {
               var alpha = 0.01;
               var beta = alpha/16;
+              engine.setValue(group, "slip_enabled", true);
               engine.scratchEnable(deck, 64, 33+1/3, alpha, beta);
             } else {
               engine.scratchDisable(deck);        
+              engine.setValue(group, "slip_enabled", false);
             }
         }
     } else {
@@ -362,6 +398,37 @@ var BCR2000 = (function () {
         };
     }
 
+    function encoder1Out(group) {
+        return {
+            o: { group: group, key:"volume" },
+            a: { group: group, key:"pregain" }
+        };
+    }
+
+    function encoder2Out(group) {
+        return {
+            o: { group: eqForChannel(group), key:"parameter3" }
+        };
+    }
+
+    function encoder3Out(group) {
+        return {
+            o: { group: filterForChannel(group), key:"super1" }
+        };
+    }
+
+    function encoder4Out(group) {
+        return {
+            o: { group: eqForChannel(group), key:"parameter2" }
+        };
+    }
+
+    function encoder6Out(group) {
+        return {
+            o: { group: eqForChannel(group), key:"parameter1" }
+        };
+    }
+
     return {
         init: function (id, debugging) {
           shift1.connectCC(0x27, pushEncoder1Out("[Channel1]"));
@@ -385,6 +452,28 @@ var BCR2000 = (function () {
           shift1.connectNote(0x0D, button4Out("[Channel3]"));
           shift1.connectNote(0x0E, button3Out("[Channel4]"));
           shift1.connectNote(0x0F, button4Out("[Channel4]"));
+          
+          shift1.connectCC(0x00, encoder1Out("[Channel1]"));
+          shift1.connectCC(0x02, encoder1Out("[Channel2]"));
+          shift1.connectCC(0x04, encoder1Out("[Channel3]"));
+          shift1.connectCC(0x06, encoder1Out("[Channel4]"));
+          shift1.connectCC(0x01, encoder2Out("[Channel1]"));
+          shift1.connectCC(0x03, encoder2Out("[Channel2]"));
+          shift1.connectCC(0x05, encoder2Out("[Channel3]"));
+          shift1.connectCC(0x07, encoder2Out("[Channel4]"));
+          shift1.connectCC(0x08, encoder3Out("[Channel1]"));
+          shift1.connectCC(0x0A, encoder3Out("[Channel2]"));
+          shift1.connectCC(0x0C, encoder3Out("[Channel3]"));
+          shift1.connectCC(0x0E, encoder3Out("[Channel4]"));
+          shift1.connectCC(0x09, encoder4Out("[Channel1]"));
+          shift1.connectCC(0x0B, encoder4Out("[Channel2]"));
+          shift1.connectCC(0x0D, encoder4Out("[Channel3]"));
+          shift1.connectCC(0x0F, encoder4Out("[Channel4]"));
+          
+          shift1.connectCC(0x11, encoder6Out("[Channel1]"));
+          shift1.connectCC(0x13, encoder6Out("[Channel2]"));
+          shift1.connectCC(0x15, encoder6Out("[Channel3]"));
+          shift1.connectCC(0x17, encoder6Out("[Channel4]"));
         },
         shutdown: function() {},
         
@@ -406,6 +495,7 @@ var BCR2000 = (function () {
         pushEncoder1Btn: shift1.map({
             o: buttonHold("scratch_enable"), 
             a: buttonSet("rate", 0.0),
+            b: buttonHold("cue_default"),
             c: buttonSet("pitch", 0.0),
             d: buttonToggle("quantize")
         }),
@@ -437,6 +527,27 @@ var BCR2000 = (function () {
             b: buttonToggle("pfl"),
             c: buttonHold("beatjump_16_forward"),
             d: buttonHold("beatjump_1_forward")
+        }),
+        
+        encoder1: shift1.map({
+            o: encoder("volume"),
+            a: encoder("pregain"),
+            d: encoder("loop_move")
+        }),
+        encoder2: shift1.map({
+            o: encoder("parameter3", eqForChannel), // high
+            d: encoder("loop_factor2")
+        }),
+        encoder3: shift1.map({
+            o: encoder("super1", filterForChannel)
+        }),
+        encoder4: shift1.map({
+            o: encoder("parameter2", eqForChannel) // mid
+        }),
+        encoder5: shift1.map({
+        }),
+        encoder6: shift1.map({
+            o: encoder("parameter1", eqForChannel) // low
         })
         
     };
