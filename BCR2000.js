@@ -34,9 +34,9 @@ D
   <>   
 0     Pitch bend / output VU   
 A     Rate
-B     Position
+B     Seek
 C     Key
-D     Move beatgrid (beats_translate) / beatgrid_active
+D     Move beatgrid
   <> (press)  
 0     Scratch
 A     Reset rate
@@ -44,39 +44,40 @@ B     Cue
 C     Reset key
 D     Quantize on/off
   []                  []
-0 FX1                 FX2
+0 Bitcrusher          Echo
 A Cue 1               Cue 2
 B Load                Sync
 C Jump <4             Jump >4
 D Loop 4              Loop 16
   []                  []
-0 FX3                 Loop act
+0 Reverb              Loop act
 A Cue 3               Cue 4
 B Play                PFL
 C Jump <16            Jump >16
 D Jump <1             Jump >1
   <>                  <>
 0 Volume              High
-A Gain
-B 
-C
-D Move loop           Size loop (/2, *2) 
+A Gain                Bitcrusher:depth
+B                     Echo:send
+C                     Reverb:bandwidth
+D Move loop           
   <>                  <>
 0 Filter              Mid
-A  
-B  
-C
-D  
+A                     Bitcrusher:sample rate
+B                     Echo:delay
+C                     Reverb:damping
+D Size loop (/2, *2) 
   <>                  <>
-0                     Low
-A  
-B  
-C
-D  
+0 FX Dry/wet          Low
+A     "               
+B     "               Echo:feedback
+C     "
+D     "
 
 - Consider A -> B to activate another shift level for cues 5..8
   and for sync master
 - Blink VU meter (FAST), or all 4 buttons, or ... when nearing end of track
+- Blink loop button when loop created, inactive, and playhead in loop
 */
 
 
@@ -102,8 +103,11 @@ function getCfg(key) {
       parameter1: { maximum: 4 },
       parameter2: { maximum: 4 },
       parameter3: { maximum: 4 },
-      loop_move: { minimum: -1, accelleration: 1.1 },
-      loop_factor2: { step: 1, accelleration: 0, up: "loop_double", down: "loop_halve" }
+      loop_move: { minimum: -1, accelleration: 1.1, reset: true },
+      loop_factor2: { step: 1, accelleration: 0, up: "loop_double", down: "loop_halve" },
+      headVolume: { maximum: 5 },
+      headMix: { minimum: -1, maximum: 1, step: 0.03 },
+      SelectTrackKnob: { minimum: -25, maximum: 25, step: 1, accelleration: 2, accellerationLimit: 16, reset: true }
     };
     
     return withDefaults(keyInfo[key], {
@@ -113,23 +117,22 @@ function getCfg(key) {
         minimum: 0,
         maximum: 1,
         up: undefined,
-        down: undefined
+        down: undefined,
+        reset: false
     });
 }
 
-function eqForChannel(group) {
-    return "[EqualizerRack1_" + group + "_Effect1]";
-}
-
-function filterForChannel(group) {
-    return "[QuickEffectRack1_" + group + "]";
+function resolveGroupFn(groupFn) {
+    return (typeof groupFn === "function") ? groupFn :
+            (typeof groupFn === "string") ? function(s) { return groupFn; } :
+             function(s) { return s; };
 }
 
 // This wraps the handling code for a BCR2000 encoder set to "Rel2" mode
 // @param key Mixxx control key to bind to, required
 // @param groupFn Transformation to apply to group string
 function encoder(key, groupFn) {
-    if (groupFn === undefined) groupFn = function(s) { return s; };
+    groupFn = resolveGroupFn(groupFn);
 
     var cfg = getCfg(key);
     var accel = 1.0;
@@ -147,24 +150,22 @@ function encoder(key, groupFn) {
         
         lastMsg = new Date().getTime();
         var delta = (value > 64) ? cfg.step : -cfg.step;
+        group = groupFn(group);
         if (key == "scratch") { // scratch must be done through JS...for some reason
           var deck = group[8] - '1' + 1;
           script.midiDebug(0, 0, value, 0, "scratch: " + delta * accel);
           engine.scratchTick(deck, delta * accel);
         } else if (delta > 0 && cfg.up !== undefined) {
-          group = groupFn(group);
           for (var i = 0; i < accel; i++) {
             engine.setValue(group, cfg.up, true);
             engine.setValue(group, cfg.up, false);                    
           }
         } else if (delta < 0 && cfg.down !== undefined) {
-          group = groupFn(group);
           for (var i = 0; i < accel; i++) {
             engine.setValue(group, cfg.down, true);
             engine.setValue(group, cfg.down, false);
           }
         } else {
-          group = groupFn(group);
           var v = engine.getValue(group, key) + delta * accel;
           if (v < cfg.minimum) v = cfg.minimum;
           if (v > cfg.maximum) v = cfg.maximum;
@@ -172,13 +173,14 @@ function encoder(key, groupFn) {
           engine.setValue(group, key, v);
         }
         
-        if (key == "loop_move") { // must be reset after each apply...
+        if (cfg.reset) { // must be reset after each apply...
           engine.setValue(group, key, 0);
         }
     };
 }
 
-function buttonHold(key) {
+function buttonHold(key, groupFn) {
+    groupFn = resolveGroupFn(groupFn);
     if (key == "scratch_enable") { // scratch has to be done through JS...for some reason
         return function (channel, control, value, status, group) {
             var deck = group[8] - '1' + 1;
@@ -194,23 +196,25 @@ function buttonHold(key) {
         }
     } else {
         return function (channel, control, value, status, group) {
-            engine.setValue(group, key, value > 0);
+            engine.setValue(groupFn(group), key, value > 0);
         };
     }
 }
 
-function buttonToggle(key) {
+function buttonToggle(key, groupFn) {
+    groupFn = resolveGroupFn(groupFn);
     return function (channel, control, value, status, group) {
          if (value > 0) {         
-             engine.setValue(group, key, !engine.getValue(group, key));
+             engine.setValue(groupFn(group), key, !engine.getValue(group, key));
          }
     };
 }
 
-function buttonSet(key, valueOnPress) {
+function buttonSet(key, valueOnPress, groupFn) {
+    groupFn = resolveGroupFn(groupFn);
     return function (channel, control, value, status, group) {
          if (value > 0) {
-             engine.setValue(group, key, valueOnPress);         
+             engine.setValue(groupFn(group), key, valueOnPress);         
          }
     };
 }
@@ -358,6 +362,29 @@ function Control(key) {
 }
 
 var BCR2000 = (function () {
+    function eqForChannel(group) { return "[EqualizerRack1_" + group + "_Effect1]"; }
+    function filterForChannel(group) { return "[QuickEffectRack1_" + group + "]"; }
+    function fxChainForChannel(group) { 
+        var deck = group[8] - '1' + 1;
+        return "[EffectRack1_EffectUnit" + deck + "]";
+    }
+    
+    function channelFx(fxNum) {
+        return function(group) {
+            var deck = group[8] - '1' + 1;
+            return "[EffectRack1_EffectUnit" + deck + "_Effect" + fxNum + "]";            
+        };
+    }
+
+    function selectFX(group, num) {
+        engine.setValue(group, "clear", true);
+        engine.setValue(group, "clear", false);
+        for (var i = 0; i < num; i++){ 
+            engine.setValue(group, "next_effect", true);
+            engine.setValue(group, "next_effect", false);
+        }
+    }
+
     var shift1 = new Shifter(["o","a","b","c","d"]);
     var scratch_enable = new Control("scratch_enable");
 
@@ -366,7 +393,8 @@ var BCR2000 = (function () {
             o: { group: group, key:"VuMeter"},
             a: { group: group, key:"rate"},
             b: { group: group, key:"playposition"},
-            c: { group: group, key:"pitch"}
+            c: { group: group, key:"pitch"},
+            d: { group: group, key:"beat_active"}
         };
     }
     
@@ -407,7 +435,7 @@ var BCR2000 = (function () {
 
     function encoder2Out(group) {
         return {
-            o: { group: eqForChannel(group), key:"parameter3" }
+            o: { group: eqForChannel(group), key:"parameter3" } // TODO map these into two ranges
         };
     }
 
@@ -420,6 +448,16 @@ var BCR2000 = (function () {
     function encoder4Out(group) {
         return {
             o: { group: eqForChannel(group), key:"parameter2" }
+        };
+    }
+
+    function encoder5Out(group) {
+        return {
+            o: { group: fxChainForChannel(group), key:"mix" },
+            a: { group: fxChainForChannel(group), key:"mix" },
+            b: { group: fxChainForChannel(group), key:"mix" },
+            c: { group: fxChainForChannel(group), key:"mix" },
+            d: { group: fxChainForChannel(group), key:"mix" }
         };
     }
 
@@ -469,11 +507,39 @@ var BCR2000 = (function () {
           shift1.connectCC(0x0B, encoder4Out("[Channel2]"));
           shift1.connectCC(0x0D, encoder4Out("[Channel3]"));
           shift1.connectCC(0x0F, encoder4Out("[Channel4]"));
-          
+          shift1.connectCC(0x10, encoder5Out("[Channel1]"));
+          shift1.connectCC(0x12, encoder5Out("[Channel2]"));
+          shift1.connectCC(0x14, encoder5Out("[Channel3]"));
+          shift1.connectCC(0x16, encoder5Out("[Channel4]"));          
           shift1.connectCC(0x11, encoder6Out("[Channel1]"));
           shift1.connectCC(0x13, encoder6Out("[Channel2]"));
           shift1.connectCC(0x15, encoder6Out("[Channel3]"));
           shift1.connectCC(0x17, encoder6Out("[Channel4]"));
+          
+          shift1.connectCC(0x01, {
+              o: { group: "[Master]", key: "volume" }
+          });
+          shift1.connectCC(0x03, {
+              o: { group: "[Master]", key: "headVolume" }
+          });
+          shift1.connectCC(0x05, {
+              o: { group: "[Master]", key: "headMix" }
+          });
+          shift1.connectCC(0x07, {
+              o: { group: "[PreviewDeck1]", key: "VuMeter" },
+              a: { group: "[PreviewDeck1]", key: "playposition" }
+          });
+          
+          // Set up one effect chain for each deck, with fixed BC->Echo->Reverb
+          for (var i = 1; i <= 4; i++) {
+              engine.setValue("[EffectRack1_EffectUnit" + i + "]", "group_[Channel" + i + "]_enable", true);
+              engine.setValue("[EffectRack1_EffectUnit" + i + "_Effect1]", "enabled", false);
+              engine.setValue("[EffectRack1_EffectUnit" + i + "_Effect2]", "enabled", false);
+              engine.setValue("[EffectRack1_EffectUnit" + i + "_Effect3]", "enabled", false);
+              selectFX("[EffectRack1_EffectUnit" + i + "_Effect1]", 7);
+              selectFX("[EffectRack1_EffectUnit" + i + "_Effect2]", 9);
+              selectFX("[EffectRack1_EffectUnit" + i + "_Effect3]", 11); // for 2.0.0: 10
+          }
         },
         shutdown: function() {},
         
@@ -536,18 +602,35 @@ var BCR2000 = (function () {
         }),
         encoder2: shift1.map({
             o: encoder("parameter3", eqForChannel), // high
-            d: encoder("loop_factor2")
+            a: encoder("parameter1", channelFx(1))
         }),
         encoder3: shift1.map({
-            o: encoder("super1", filterForChannel)
+            o: encoder("super1", filterForChannel),
+            d: encoder("loop_factor2")
         }),
         encoder4: shift1.map({
             o: encoder("parameter2", eqForChannel) // mid
         }),
-        encoder5: shift1.map({
-        }),
+        encoder5: encoder("mix", fxChainForChannel),
         encoder6: shift1.map({
             o: encoder("parameter1", eqForChannel) // low
+        }),
+        
+        globalPushEncoder1: shift1.map({
+            o: encoder("volume", "[Master]")
+        }),
+        globalPushEncoder2: shift1.map({
+            o: encoder("headVolume", "[Master]")        
+        }),
+        globalPushEncoder3: shift1.map({
+            o: encoder("headMix", "[Master]")                
+        }),
+        globalPushEncoder4: shift1.map({
+            o: encoder("SelectTrackKnob", "[Playlist]"),
+            a: encoder("playposition", "[PreviewDeck1]")
+        }),
+        globalPushEncoder4Btn: shift1.map({
+            o: buttonToggle("LoadSelectedTrack", "[PreviewDeck1]")
         })
         
     };

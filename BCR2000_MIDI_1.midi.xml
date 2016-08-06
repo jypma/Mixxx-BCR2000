@@ -61,6 +61,15 @@
                 </options>
             </control>
             <control>
+                <group>[Master]</group>
+                <key>BCR2000.globalPushEncoder4Btn</key>
+                <status>0x90</status>
+                <midino>0x2E</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
                 <group>[Channel2]</group>
                 <key>BCR2000.encoder2</key>
                 <status>0xB0</status>
@@ -101,6 +110,15 @@
                 <key>BCR2000.pushEncoder1Btn</key>
                 <status>0x90</status>
                 <midino>0x27</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>BCR2000.globalPushEncoder1Btn</key>
+                <status>0x90</status>
+                <midino>0x28</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -236,6 +254,15 @@
                 <key>BCR2000.pushEncoder1Btn</key>
                 <status>0x90</status>
                 <midino>0x2B</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Global]</group>
+                <key>BCR2000.globalPushEncoder3Btn</key>
+                <status>0x90</status>
+                <midino>0x2C</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -425,6 +452,15 @@
                 <key>BCR2000.pushEncoder1Btn</key>
                 <status>0x90</status>
                 <midino>0x29</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Global]</group>
+                <key>BCR2000.globalPushEncoder2Btn</key>
+                <status>0x90</status>
+                <midino>0x2A</midino>
                 <options>
                     <script-binding/>
                 </options>
