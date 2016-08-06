@@ -78,6 +78,7 @@ D     "
   and for sync master
 - Blink VU meter (FAST), or all 4 buttons, or ... when nearing end of track
 - Blink loop button when loop created, inactive, and playhead in loop
+- Add outputs for all shift states, or default to just off
 */
 
 
@@ -94,20 +95,20 @@ function getCfg(key) {
     var keyInfo = {
       rate: { minimum: -1, maximum: 1, step: 0.001 },
       jog: { minimum: -3, maximum: 3, step: 0.1, accellerationLimit: 30, accelleration: 1.1 },
-      playposition: { step: 0.00003, accellerationLimit: 500 },
+      playposition: { step: 0.00003, accellerationLimit: 500, accelleration: 1.4 },
       beats_translate: { step: 1, accelleration: 2, up: "beats_translate_later", down: "beats_translate_earlier"},
       pitch: { minimum: -6, maximum: 6, step: 0.01, accelleration: 1.1 },
       scratch: { step: 1, accelleration: 2, accellerationLimit: 4 },
       super1: { accelleration: 1.1 },
       pregain: { maximum: 4 },
-      parameter1: { maximum: 4 },
-      parameter2: { maximum: 4 },
-      parameter3: { maximum: 4 },
+//      parameter1: { maximum: 4 },
+//      parameter2: { maximum: 4 },
+//      parameter3: { maximum: 4 },
       loop_move: { minimum: -1, accelleration: 1.1, reset: true },
       loop_factor2: { step: 1, accelleration: 0, up: "loop_double", down: "loop_halve" },
       headVolume: { maximum: 5 },
       headMix: { minimum: -1, maximum: 1, step: 0.03 },
-      SelectTrackKnob: { minimum: -25, maximum: 25, step: 1, accelleration: 2, accellerationLimit: 16, reset: true }
+      SelectTrackKnob: { minimum: -25, maximum: 25, step: 1, accelleration: 1.3, accellerationLimit: 16, reset: true }
     };
     
     return withDefaults(keyInfo[key], {
@@ -165,16 +166,22 @@ function encoder(key, groupFn) {
             engine.setValue(group, cfg.down, true);
             engine.setValue(group, cfg.down, false);
           }
-        } else {
+        } else if (cfg.minimum != 0 || cfg.maximum != 1) {
           var v = engine.getValue(group, key) + delta * accel;
           if (v < cfg.minimum) v = cfg.minimum;
           if (v > cfg.maximum) v = cfg.maximum;
           script.midiDebug(0, 0, v, 0, "writing to " + group + ":" + key + "=" + v + " accel=" + accel);
           engine.setValue(group, key, v);
+        } else {
+          var v = engine.getParameter(group, key) + delta * accel;
+          if (v < 0) v = 0;
+          if (v > 1) v = 1;
+          script.midiDebug(0, 0, v, 0, "writing to " + group + ":" + key + "=" + v + " accel=" + accel);
+          engine.setParameter(group, key, v);
         }
         
         if (cfg.reset) { // must be reset after each apply...
-          engine.setValue(group, key, 0);
+          engine.setParameter(group, key, 0);
         }
     };
 }
@@ -204,17 +211,22 @@ function buttonHold(key, groupFn) {
 function buttonToggle(key, groupFn) {
     groupFn = resolveGroupFn(groupFn);
     return function (channel, control, value, status, group) {
-         if (value > 0) {         
-             engine.setValue(groupFn(group), key, !engine.getValue(group, key));
-         }
+        var g = groupFn(group); 
+        if (value > 0) {         
+            var v = engine.getValue(g, key);
+            script.midiDebug(channel, control, value, status, "v=" + v + " g=" + g); 
+            engine.setValue(g, key, !engine.getValue(g, key));
+        }
+        script.midiDebug(channel, control, value, status, "exiting"); 
     };
 }
 
 function buttonSet(key, valueOnPress, groupFn) {
     groupFn = resolveGroupFn(groupFn);
     return function (channel, control, value, status, group) {
+        group = groupFn(group); 
          if (value > 0) {
-             engine.setValue(groupFn(group), key, valueOnPress);         
+             engine.setValue(group, key, valueOnPress);         
          }
     };
 }
@@ -287,7 +299,7 @@ function Shifter(levels) {
                 // If releasing a button that has an output, re-trigger its value.
                 var key = keys["" + currentValue + control + status];
                 if (key !== undefined) {
-                    engine.trigger(group, key);
+                    engine.trigger(key.group, key.key);
                 }
             }
         };
@@ -296,11 +308,20 @@ function Shifter(levels) {
     function createCallback(group, key) {
       var cfg = getCfg(key);
       engine.connectControl(group, key, function(value) {              
+        /*
         var target = connected[group][key][currentValue];
         //script.midiDebug(0, 0, value, 0, "hit " + group + ":" + key + ", current=" + currentValue + " target=" + target + " p=" + connected[group][key]);
         
         if (target === undefined) return;
         midi.sendShortMsg(target.status, target.control, (value - cfg.minimum) / (cfg.maximum - cfg.minimum) * 127);
+        */
+        var target = connected[group][key][currentValue];
+        
+        if (target === undefined) return;
+        script.midiDebug(0, 0, value, 0, "get " + group + ":" + key);
+        value = engine.getParameter(group, key);
+        script.midiDebug(0, 0, value, 0, "hit " + group + ":" + key + "=" + value + " target=" + target.control);
+        midi.sendShortMsg(target.status, target.control, value * 127);
       });      
     }
     
@@ -320,7 +341,7 @@ function Shifter(levels) {
               script.midiDebug(0, 0, targetValue, 0, "already bound " + group + ":" + key);
             }
             connected[group][key][targetValue] = midi;
-            keys["" + targetValue + midi.control + midi.status] = key;
+            keys["" + targetValue + midi.control + midi.status] = routes[targetValue];
             script.midiDebug(0, 0, targetValue, 0, "done " + group + ":" + key + " for " + targetValue);        
         }
     
@@ -400,12 +421,14 @@ var BCR2000 = (function () {
     
     function button1Out(group) {
         return {
+            o: { group: channelFx(1)(group), key: "enabled"},
             a: { group: group, key:"hotcue_1_enabled" }
         };
     }
 
     function button2Out(group) {
         return {
+            o: { group: channelFx(2)(group), key: "enabled"},
             a: { group: group, key:"hotcue_2_enabled" },
             b: { group: group, key:"beatsync" }        
         };
@@ -413,6 +436,7 @@ var BCR2000 = (function () {
 
     function button3Out(group) {
         return {
+            o: { group: channelFx(3)(group), key: "enabled"},
             a: { group: group, key:"hotcue_3_enabled" },        
             b: { group: group, key:"play_indicator" }                
         };
@@ -435,7 +459,10 @@ var BCR2000 = (function () {
 
     function encoder2Out(group) {
         return {
-            o: { group: eqForChannel(group), key:"parameter3" } // TODO map these into two ranges
+            o: { group: eqForChannel(group), key:"parameter3" }, // TODO map these into two ranges
+            a: { group: channelFx(1)(group), key:"parameter1" },
+            b: { group: channelFx(2)(group), key:"parameter1" },
+            c: { group: channelFx(3)(group), key:"parameter1" }
         };
     }
 
@@ -447,7 +474,10 @@ var BCR2000 = (function () {
 
     function encoder4Out(group) {
         return {
-            o: { group: eqForChannel(group), key:"parameter2" }
+            o: { group: eqForChannel(group), key:"parameter2" },
+            a: { group: channelFx(1)(group), key:"parameter2" },
+            b: { group: channelFx(2)(group), key:"parameter2" },
+            c: { group: channelFx(3)(group), key:"parameter2" }
         };
     }
 
@@ -463,7 +493,8 @@ var BCR2000 = (function () {
 
     function encoder6Out(group) {
         return {
-            o: { group: eqForChannel(group), key:"parameter1" }
+            o: { group: eqForChannel(group), key:"parameter1" },
+            b: { group: channelFx(2)(group), key:"parameter3" }
         };
     }
 
@@ -516,16 +547,16 @@ var BCR2000 = (function () {
           shift1.connectCC(0x15, encoder6Out("[Channel3]"));
           shift1.connectCC(0x17, encoder6Out("[Channel4]"));
           
-          shift1.connectCC(0x01, {
+          shift1.connectCC(0x28, {
               o: { group: "[Master]", key: "volume" }
           });
-          shift1.connectCC(0x03, {
+          shift1.connectCC(0x2A, {
               o: { group: "[Master]", key: "headVolume" }
           });
-          shift1.connectCC(0x05, {
+          shift1.connectCC(0x2C, {
               o: { group: "[Master]", key: "headMix" }
           });
-          shift1.connectCC(0x07, {
+          shift1.connectCC(0x2E, {
               o: { group: "[PreviewDeck1]", key: "VuMeter" },
               a: { group: "[PreviewDeck1]", key: "playposition" }
           });
@@ -567,21 +598,21 @@ var BCR2000 = (function () {
         }),
         
         button1: shift1.map({
-            //o: buttonToggle("fx1:enabled")
+            o: buttonToggle("enabled", channelFx(1)),
             a: buttonHold("hotcue_1_activate"),
-            b: buttonToggle("LoadSelectedTrack"),
+            b: buttonHold("LoadSelectedTrack"),
             c: buttonHold("beatjump_4_backward"),
             d: buttonHold("beatloop_4_activate")
         }),
         button2: shift1.map({
-            //o: buttonToggle("fx2:enabled")
+            o: buttonToggle("enabled", channelFx(2)),
             a: buttonHold("hotcue_2_activate"),
             b: buttonToggle("beatsync"),
             c: buttonHold("beatjump_4_forward"),
             d: buttonHold("beatloop_16_activate")
         }),
         button3: shift1.map({
-            //o: buttonToggle("fx3:enabled")
+            o: buttonToggle("enabled", channelFx(3)),
             a: buttonHold("hotcue_3_activate"),
             b: buttonToggle("play"),
             c: buttonHold("beatjump_16_backward"),
@@ -602,18 +633,24 @@ var BCR2000 = (function () {
         }),
         encoder2: shift1.map({
             o: encoder("parameter3", eqForChannel), // high
-            a: encoder("parameter1", channelFx(1))
+            a: encoder("parameter1", channelFx(1)),
+            b: encoder("parameter1", channelFx(2)),
+            c: encoder("parameter1", channelFx(3))
         }),
         encoder3: shift1.map({
             o: encoder("super1", filterForChannel),
             d: encoder("loop_factor2")
         }),
         encoder4: shift1.map({
-            o: encoder("parameter2", eqForChannel) // mid
+            o: encoder("parameter2", eqForChannel), // mid
+            a: encoder("parameter2", channelFx(1)),
+            b: encoder("parameter2", channelFx(2)),
+            c: encoder("parameter2", channelFx(3))
         }),
         encoder5: encoder("mix", fxChainForChannel),
         encoder6: shift1.map({
-            o: encoder("parameter1", eqForChannel) // low
+            o: encoder("parameter1", eqForChannel), // low
+            b: encoder("parameter3", channelFx(2))
         }),
         
         globalPushEncoder1: shift1.map({
@@ -625,12 +662,15 @@ var BCR2000 = (function () {
         globalPushEncoder3: shift1.map({
             o: encoder("headMix", "[Master]")                
         }),
+        globalPushEncoder3Btn: shift1.map({
+            o: buttonHold("stop", "[PreviewDeck1]")
+        }),
         globalPushEncoder4: shift1.map({
             o: encoder("SelectTrackKnob", "[Playlist]"),
-            a: encoder("playposition", "[PreviewDeck1]")
+            b: encoder("playposition", "[PreviewDeck1]")
         }),
         globalPushEncoder4Btn: shift1.map({
-            o: buttonToggle("LoadSelectedTrack", "[PreviewDeck1]")
+            o: buttonToggle("LoadSelectedTrackAndPlay", "[PreviewDeck1]") // TODO stop if playing same
         })
         
     };
