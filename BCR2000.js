@@ -564,12 +564,12 @@ var BCR2000 = (function () {
           // Set up one effect chain for each deck, with fixed BC->Echo->Reverb
           for (var i = 1; i <= 4; i++) {
               engine.setValue("[EffectRack1_EffectUnit" + i + "]", "group_[Channel" + i + "]_enable", true);
-              engine.setValue("[EffectRack1_EffectUnit" + i + "_Effect1]", "enabled", false);
-              engine.setValue("[EffectRack1_EffectUnit" + i + "_Effect2]", "enabled", false);
-              engine.setValue("[EffectRack1_EffectUnit" + i + "_Effect3]", "enabled", false);
-              selectFX("[EffectRack1_EffectUnit" + i + "_Effect1]", 7);
-              selectFX("[EffectRack1_EffectUnit" + i + "_Effect2]", 9);
-              selectFX("[EffectRack1_EffectUnit" + i + "_Effect3]", 11); // for 2.0.0: 10
+              engine.setValue("[EffectRack1_EffectUnit" + i + "_Effect1]", "enabled", true);
+              engine.setValue("[EffectRack1_EffectUnit" + i + "_Effect2]", "enabled", true);
+              engine.setValue("[EffectRack1_EffectUnit" + i + "_Effect3]", "enabled", true);
+              selectFX("[EffectRack1_EffectUnit" + i + "_Effect1]", 5);
+              selectFX("[EffectRack1_EffectUnit" + i + "_Effect2]", 8);
+              selectFX("[EffectRack1_EffectUnit" + i + "_Effect3]", 18);
           }
         },
         shutdown: function() {},
@@ -598,21 +598,21 @@ var BCR2000 = (function () {
         }),
         
         button1: shift1.map({
-            o: buttonToggle("enabled", channelFx(1)),
+//            o: buttonToggle("enabled", channelFx(1)),
             a: buttonHold("hotcue_1_activate"),
             b: buttonHold("LoadSelectedTrack"),
             c: buttonHold("beatjump_4_backward"),
             d: buttonHold("beatloop_4_activate")
         }),
         button2: shift1.map({
-            o: buttonToggle("enabled", channelFx(2)),
+//            o: buttonToggle("enabled", channelFx(2)),
             a: buttonHold("hotcue_2_activate"),
             b: buttonToggle("beatsync"),
             c: buttonHold("beatjump_4_forward"),
             d: buttonHold("beatloop_16_activate")
         }),
         button3: shift1.map({
-            o: buttonToggle("enabled", channelFx(3)),
+//            o: buttonToggle("enabled", channelFx(3)),
             a: buttonHold("hotcue_3_activate"),
             b: buttonToggle("play"),
             c: buttonHold("beatjump_16_backward"),
@@ -633,8 +633,8 @@ var BCR2000 = (function () {
         }),
         encoder2: shift1.map({
             o: encoder("parameter3", eqForChannel), // high
-            a: encoder("parameter1", channelFx(1)),
-            b: encoder("parameter1", channelFx(2)),
+            a: encoder("parameter1", channelFx(1)), // bc depth
+            b: encoder("parameter4", channelFx(2)), // echo send
             c: encoder("parameter1", channelFx(3))
         }),
         encoder3: shift1.map({
@@ -643,14 +643,14 @@ var BCR2000 = (function () {
         }),
         encoder4: shift1.map({
             o: encoder("parameter2", eqForChannel), // mid
-            a: encoder("parameter2", channelFx(1)),
-            b: encoder("parameter2", channelFx(2)),
+            a: encoder("parameter2", channelFx(1)), // bc sample rate
+            b: encoder("parameter1", channelFx(2)), // echo time/delay
             c: encoder("parameter2", channelFx(3))
         }),
         encoder5: encoder("mix", fxChainForChannel),
         encoder6: shift1.map({
             o: encoder("parameter1", eqForChannel), // low
-            b: encoder("parameter3", channelFx(2))
+            b: encoder("parameter2", channelFx(2))  // echo feedback
         }),
         
         globalPushEncoder1: shift1.map({
