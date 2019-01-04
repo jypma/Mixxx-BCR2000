@@ -101,9 +101,6 @@ function getCfg(key) {
       scratch: { step: 1, accelleration: 2, accellerationLimit: 4 },
       super1: { accelleration: 1.1 },
       pregain: { maximum: 4 },
-//      parameter1: { maximum: 4 },
-//      parameter2: { maximum: 4 },
-//      parameter3: { maximum: 4 },
       loop_move: { minimum: -1, accelleration: 1.1, reset: true },
       loop_factor2: { step: 1, accelleration: 0, up: "loop_double", down: "loop_halve" },
       headVolume: { maximum: 5 },
@@ -208,6 +205,21 @@ function buttonHold(key, groupFn) {
     }
 }
 
+function buttonReset(values, groupFn) {
+  groupFn = resolveGroupFn(groupFn);
+  return function (channel, control, value, status, group) {
+    group = groupFn(group);
+    if (value > 0) {
+      print("TODO");
+    } else {
+      for (key in values) {
+        print("Reset " + group + " / " + key + " to " + values[key]);
+        engine.setParameter(group, key, values[key]);
+      }
+    }
+  };
+}
+
 function buttonToggle(key, groupFn) {
     groupFn = resolveGroupFn(groupFn);
     return function (channel, control, value, status, group) {
@@ -240,24 +252,47 @@ function buttonSet(key, valueOnPress, groupFn) {
 // This closely models the generic shifting framework present in another 
 // well-known German DJ package, which the author has used a lot.
 function Shifter(levels) {
-    if (levels === undefined) levels = [ "off", "on" ];
+  if (levels === undefined) levels = [ "off", "on" ];
 
-    var currentValue = levels[0];
-    var connected = {};
-    var pressed = []; // currently pressed values, which we'll return to when one is released.
-    var keys = {};
-    
-    function switchTo(v) {
-      script.midiDebug(0, 0, v, 0, "switching to " + v);
-      currentValue = v;
-      for (group in connected) {
-        for (key in connected[group]) {
-          if (connected[group][key][v] !== undefined) {
-            engine.trigger(group, key);
+  var currentValue = levels[0];
+  var connected = {};
+  var pressed = []; // currently pressed values, which we'll return to when one is released.
+  var keys = {};
+
+  function connectControl(group, key, targetValue, callback) {
+    if (connected[group] === undefined) {
+      connected[group] = {};
+    }
+    if (connected[group][key] === undefined) {
+      connected[group][key] = {};
+      engine.connectControl(group, key, function(value) {
+        var callbacks = connected[group][key][currentValue];
+        //print(group + " / " + key + " calling " + callbacks);
+        if (callbacks != undefined) {
+          for (i in callbacks) {
+            callbacks[i].apply(null, arguments);
           }
+        }
+      });
+    }
+    if (connected[group][key][targetValue] === undefined) {
+      connected[group][key][targetValue] = [ callback ];
+    } else {
+      connected[group][key][targetValue].push(callback);
+    }
+  }
+
+  function switchTo(v) {
+    script.midiDebug(0, 0, v, 0, "switching to " + v);
+    currentValue = v;
+    for (group in connected) {
+      for (key in connected[group]) {
+        if (connected[group][key][v] !== undefined) {
+          engine.trigger(group, key);
         }
       }
     }
+  }
     
     // TODO write increment, decrement functions to bind to buttons to inc/dec the shifter value.
     
@@ -290,62 +325,79 @@ function Shifter(levels) {
     // Serves as a router that invok=es nested functions, depending on the current
     // value of the shift button.
     
-    this.map = function(routes) {
-        return function(channel, control, value, status, group) {
-            var target = routes[currentValue];
-            if (target !== undefined) {
-                target.apply(null, arguments);
+  this.map = function(routes) {
+    return function(channel, control, value, status, group) {
+      var target = routes[currentValue];
+      if (target !== undefined) {
+        target.apply(null, arguments);
 
-                // If releasing a button that has an output, re-trigger its value.
-                var key = keys["" + currentValue + control + status];
-                if (key !== undefined) {
-                    engine.trigger(key.group, key.key);
-                }
-            }
-        };
-    };
-    
-    function createCallback(group, key) {
-      var cfg = getCfg(key);
-      engine.connectControl(group, key, function(value) {              
-        /*
-        var target = connected[group][key][currentValue];
-        //script.midiDebug(0, 0, value, 0, "hit " + group + ":" + key + ", current=" + currentValue + " target=" + target + " p=" + connected[group][key]);
-        
-        if (target === undefined) return;
-        midi.sendShortMsg(target.status, target.control, (value - cfg.minimum) / (cfg.maximum - cfg.minimum) * 127);
-        */
-        var target = connected[group][key][currentValue];
-        
-        if (target === undefined) return;
-        script.midiDebug(0, 0, value, 0, "get " + group + ":" + key);
-        value = engine.getParameter(group, key);
-        script.midiDebug(0, 0, value, 0, "hit " + group + ":" + key + "=" + value + " target=" + target.control);
-        midi.sendShortMsg(target.status, target.control, value * 127);
-      });      
-    }
-    
-    function connect(midi, routes) {
-        for (targetValue in routes) {
-            var group = routes[targetValue].group;
-            var key = routes[targetValue].key;
-            script.midiDebug(0, 0, targetValue, 0, "handling " + group + ":" + key);
-            if (connected[group] === undefined) {
-              connected[group] = {};
-            }
-            if (connected[group][key] === undefined) {
-              connected[group][key] = {};
-              script.midiDebug(0, 0, targetValue, 0, "binding " + group + ":" + key);
-              createCallback(group, key);
-            } else {
-              script.midiDebug(0, 0, targetValue, 0, "already bound " + group + ":" + key);
-            }
-            connected[group][key][targetValue] = midi;
-            keys["" + targetValue + midi.control + midi.status] = routes[targetValue];
-            script.midiDebug(0, 0, targetValue, 0, "done " + group + ":" + key + " for " + targetValue);        
+        // If releasing a button that has an output, re-trigger its value.
+        var key = keys["" + currentValue + control + status];
+        if (key != undefined) {
+          for (i in key) {
+            print("retrigger")
+            engine.trigger(key[i].group, key[i].key);
+          }
         }
-    
+      }
+    };
+  };
+
+  var sumAll = function() {
+    return Array.prototype.reduce.call(arguments, function(a, b) {
+        return a + b;
+    }, 0);
+  };
+
+  function onControlChange(mididata, route) {
+    return function() {
+      print("onControlChange")
+      var values = [];
+      for (i in route.multi) {
+        var group = route.multi[i].group;
+        var key = route.multi[i].key;
+        var v = engine.getParameter(group, key);
+        print("  " + group + " / " + key + " = " + v);
+        values.push(v);
+      }
+
+      var value = route.compose.apply(null, values);
+      if (value > 1.0) {
+        value = 1.0;
+      } else if (value < 0) {
+        value = 0.0;
+      }
+      midi.sendShortMsg(mididata.status, mididata.control, value * 127);
+    };
+  }
+
+  function connect(mididata, routes) {
+    for (targetValue in routes) {
+      var route = routes[targetValue];
+      if (!route.multi) {
+        route.multi = [{group: route.group, key: route.key}];
+      }
+      if (!route.compose) {
+        route.compose = sumAll;
+      }
+
+      var callback = onControlChange(mididata, route);
+
+      for (i in route.multi) {
+        var control = route.multi[i];
+
+        // add to keys so we can reset pushbutton LEDs when they're released
+        var k = keys["" + targetValue + mididata.control + mididata.status];
+        if (k === undefined) {
+          k = [];
+          keys["" + targetValue + mididata.control + mididata.status] = k;
+        }
+        k.push(control);
+
+        connectControl(control.group, control.key, targetValue, callback);
+      }
     }
+  }
     
     this.connectCC = function(cc, routes) {
         connect({status: 0xB0, control: cc}, routes);
@@ -419,28 +471,37 @@ var BCR2000 = (function () {
         };
     }
     
-    function button1Out(group) {
-        return {
-            o: { group: channelFx(1)(group), key: "enabled"},
-            a: { group: group, key:"hotcue_1_enabled" }
-        };
-    }
+  function button1Out(group) {
+    return {
+      o: { multi: [
+        { group: channelFx(1)(group), key: "parameter1" },
+        { group: channelFx(1)(group), key: "parameter2" }
+      ], compose: function(a,b) {
+        return (a < 1) || (b < 1) ? 1.0 : 0.0;
+      } },
+      a: { group: group, key:"hotcue_1_enabled" }
+    };
+  }
 
-    function button2Out(group) {
-        return {
-            o: { group: channelFx(2)(group), key: "enabled"},
-            a: { group: group, key:"hotcue_2_enabled" },
-            b: { group: group, key:"beatsync" }        
-        };
-    }
+  function button2Out(group) {
+    return {
+      o: { group: channelFx(2)(group), key: "parameter4", compose: function(v) {
+        return (v > 0) ? 1.0 : 0.0;
+      } },
+      a: { group: group, key:"hotcue_2_enabled" },
+      b: { group: group, key:"beatsync" }
+    };
+  }
 
-    function button3Out(group) {
-        return {
-            o: { group: channelFx(3)(group), key: "enabled"},
-            a: { group: group, key:"hotcue_3_enabled" },        
-            b: { group: group, key:"play_indicator" }                
-        };
-    }
+  function button3Out(group) {
+    return {
+      o: { group: channelFx(3)(group), key: "parameter4", compose: function(v) {
+        return (v > 0) ? 1.0 : 0.0;
+      } },
+      a: { group: group, key:"hotcue_3_enabled" },
+      b: { group: group, key:"play_indicator" }
+    };
+  }
 
     function button4Out(group) {
         return {
@@ -461,8 +522,8 @@ var BCR2000 = (function () {
         return {
             o: { group: eqForChannel(group), key:"parameter3" }, // TODO map these into two ranges
             a: { group: channelFx(1)(group), key:"parameter1" },
-            b: { group: channelFx(2)(group), key:"parameter1" },
-            c: { group: channelFx(3)(group), key:"parameter1" }
+            b: { group: channelFx(2)(group), key:"parameter4" },
+            c: { group: channelFx(3)(group), key:"parameter4" }
         };
     }
 
@@ -476,8 +537,8 @@ var BCR2000 = (function () {
         return {
             o: { group: eqForChannel(group), key:"parameter2" },
             a: { group: channelFx(1)(group), key:"parameter2" },
-            b: { group: channelFx(2)(group), key:"parameter2" },
-            c: { group: channelFx(3)(group), key:"parameter2" }
+            b: { group: channelFx(2)(group), key:"parameter1" },
+            c: { group: channelFx(3)(group), key:"parameter1" }
         };
     }
 
@@ -494,7 +555,7 @@ var BCR2000 = (function () {
     function encoder6Out(group) {
         return {
             o: { group: eqForChannel(group), key:"parameter1" },
-            b: { group: channelFx(2)(group), key:"parameter3" }
+            b: { group: channelFx(2)(group), key:"parameter2" }
         };
     }
 
@@ -597,27 +658,27 @@ var BCR2000 = (function () {
             d: buttonToggle("quantize")
         }),
         
-        button1: shift1.map({
-//            o: buttonToggle("enabled", channelFx(1)),
-            a: buttonHold("hotcue_1_activate"),
-            b: buttonHold("LoadSelectedTrack"),
-            c: buttonHold("beatjump_4_backward"),
-            d: buttonHold("beatloop_4_activate")
-        }),
-        button2: shift1.map({
-//            o: buttonToggle("enabled", channelFx(2)),
-            a: buttonHold("hotcue_2_activate"),
-            b: buttonToggle("beatsync"),
-            c: buttonHold("beatjump_4_forward"),
-            d: buttonHold("beatloop_16_activate")
-        }),
-        button3: shift1.map({
-//            o: buttonToggle("enabled", channelFx(3)),
-            a: buttonHold("hotcue_3_activate"),
-            b: buttonToggle("play"),
-            c: buttonHold("beatjump_16_backward"),
-            d: buttonHold("beatjump_1_backward")
-        }),
+      button1: shift1.map({
+        o: buttonReset({ "parameter1": 1.0, "parameter2": 1.0 }, channelFx(1)),
+        a: buttonHold("hotcue_1_activate"),
+        b: buttonHold("LoadSelectedTrack"),
+        c: buttonHold("beatjump_4_backward"),
+        d: buttonHold("beatloop_4_activate")
+      }),
+      button2: shift1.map({
+        o: buttonReset({ "parameter4": 0.0 }, channelFx(2)),
+        a: buttonHold("hotcue_2_activate"),
+        b: buttonToggle("beatsync"),
+        c: buttonHold("beatjump_4_forward"),
+        d: buttonHold("beatloop_16_activate")
+      }),
+      button3: shift1.map({
+        o: buttonReset({ "parameter4": 0.0 }, channelFx(3)),
+        a: buttonHold("hotcue_3_activate"),
+        b: buttonToggle("play"),
+        c: buttonHold("beatjump_16_backward"),
+        d: buttonHold("beatjump_1_backward")
+      }),
         button4: shift1.map({
             o: buttonHold("reloop_exit"), // TODO create new loop if not inside loop points
             a: buttonHold("hotcue_4_activate"),
@@ -632,20 +693,20 @@ var BCR2000 = (function () {
             d: encoder("loop_move")
         }),
         encoder2: shift1.map({
-            o: encoder("parameter3", eqForChannel), // high
-            a: encoder("parameter1", channelFx(1)), // bc depth
-            b: encoder("parameter4", channelFx(2)), // echo send
-            c: encoder("parameter1", channelFx(3))
+          o: encoder("parameter3", eqForChannel), // high
+          a: encoder("parameter1", channelFx(1)), // bc depth
+          b: encoder("parameter4", channelFx(2)), // echo send
+          c: encoder("parameter4", channelFx(3))   // reverb send
         }),
         encoder3: shift1.map({
             o: encoder("super1", filterForChannel),
             d: encoder("loop_factor2")
         }),
         encoder4: shift1.map({
-            o: encoder("parameter2", eqForChannel), // mid
-            a: encoder("parameter2", channelFx(1)), // bc sample rate
-            b: encoder("parameter1", channelFx(2)), // echo time/delay
-            c: encoder("parameter2", channelFx(3))
+          o: encoder("parameter2", eqForChannel), // mid
+          a: encoder("parameter2", channelFx(1)), // bc sample rate
+          b: encoder("parameter1", channelFx(2)), // echo time/delay
+          c: encoder("parameter1", channelFx(3))  // reverb decay
         }),
         encoder5: encoder("mix", fxChainForChannel),
         encoder6: shift1.map({

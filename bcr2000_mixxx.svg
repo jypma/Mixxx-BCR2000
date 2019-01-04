@@ -27,8 +27,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="493.95705"
-     inkscape:cy="436.54504"
+     inkscape:cx="495.97736"
+     inkscape:cy="347.60899"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -138,9 +138,9 @@
        inkscape:connector-curvature="0"
        id="path4853"
        d="m 394.57894,187.30876 c 0.0893,5.26786 2.32142,8.16965 6.42856,8.21429 l 79.34174,0 c 5.84821,0 7.5,3.66071 7.5,7.5 l 0.53571,127.32143 c 0,3.92857 -1.38392,5.89286 -5.89285,5.89286 l -188.37338,0 c -5.26785,-0.0446 -7.75254,-2.21683 -8.02039,-8.0204 L 285.8924,204.92548 c -0.12627,-7.07107 7.70519,-6.43968 7.70519,-14.64716 l 0.67759,-118.683841 c -0.0893,-4.91071 1.60715,-7.41071 7.27679,-7.27678 l 82.31268,0 c 7.94643,-0.0893 10.24553,1.76338 10.4241,10.06696 0.64605,33.591981 0.29019,79.328081 0.29019,112.924101 z"
-       style="fill:#865900;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.35433072;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="fill:#583b00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.35433072;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
-       style="fill:#860072;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.35433072;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#6e005e;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.35433072;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 597.11453,187.30876 c 0.0893,5.26786 2.32142,8.16965 6.42856,8.21429 l 79.87745,0 c 5.84821,0 7.5,3.66071 7.5,7.5 l 0.53571,127.32143 c 0,3.92857 -1.38392,5.89286 -5.89285,5.89286 l -189.2879,0 c -5.26785,-0.0446 -7.5,-1.96429 -7.76785,-7.76786 l -0.83202,-126.20159 c -0.12626,-7.19733 7.98583,-5.29581 8.23837,-10.72538 L 495.29554,71.594479 c -0.0893,-4.91071 1.60715,-7.41071 7.27679,-7.27678 l 83.82791,0 c 7.94643,-0.0893 10.24553,1.76338 10.4241,10.06696 0.64605,33.591981 0.29019,79.328081 0.29019,112.924101 z"
        id="path4855"
        inkscape:connector-curvature="0"
@@ -150,7 +150,7 @@
        inkscape:connector-curvature="0"
        id="path4857"
        d="m 800.66027,187.30876 c 0.0893,5.26786 2.32142,8.16965 6.42856,8.21429 l 88.44888,0 c 5.84821,0 7.5,3.66071 7.5,7.5 l 0.53571,127.32143 c 0,3.92857 -1.38392,5.89286 -5.89285,5.89286 l -198.3644,0 c -5.26785,-0.0446 -7.87881,-0.76474 -7.83099,-6.31577 l -0.54232,-125.88351 c -0.12627,-6.9448 7.39967,-6.16368 7.39967,-11.18567 l 0.49875,-121.257911 c -0.0893,-4.91071 1.60715,-7.41071 7.27679,-7.27678 l 83.82791,0 c 7.94643,-0.0893 10.24553,1.76338 10.4241,10.06696 0.64605,33.591981 0.29019,79.328081 0.29019,112.924101 z"
-       style="fill:#668700;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.35433072;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="fill:#485e00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.35433072;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
        style="opacity:1;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4477"
@@ -618,7 +618,7 @@
          id="tspan4897"
          x="414.03928"
          y="531.40936"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1">Echo</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1">Delay</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1399,7 +1399,7 @@
          y="531.40936"
          x="211.53929"
          id="tspan5803"
-         sodipodi:role="line">Echo</tspan></text>
+         sodipodi:role="line">Delay</tspan></text>
     <text
        id="text5805"
        y="598.55219"
@@ -1443,7 +1443,7 @@
          id="tspan5819"
          x="616.53925"
          y="531.40936"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1">Echo</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1">Delay</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1487,7 +1487,7 @@
          y="531.40936"
          x="819.75354"
          id="tspan5835"
-         sodipodi:role="line">Echo</tspan></text>
+         sodipodi:role="line">Delay</tspan></text>
     <text
        id="text5837"
        y="598.55219"
@@ -1565,24 +1565,8 @@
            height="351.53308"
            x="59.093922"
            y="459.3403" /></flowRegion><flowPara
-         id="flowPara1437"
-         style="font-size:21.33333397px">-BC: always enabled</flowPara><flowPara
          style="font-size:21.33333397px"
-         id="flowPara1441">- Echo: always enabled</flowPara><flowPara
-         style="font-size:21.33333397px"
-         id="flowPara1451">rename delay</flowPara><flowPara
-         style="font-size:21.33333397px"
-         id="flowPara1443">turn off: set send to zero</flowPara><flowPara
-         style="font-size:21.33333397px"
-         id="flowPara1445">turn on: restore prev send</flowPara><flowPara
-         style="font-size:21.33333397px"
-         id="flowPara1447">LED feedback missing</flowPara><flowPara
-         style="font-size:21.33333397px"
-         id="flowPara1453">- Reverb: always enabled</flowPara><flowPara
-         style="font-size:21.33333397px"
-         id="flowPara1449">turn off: set send to zero</flowPara><flowPara
-         style="font-size:21.33333397px"
-         id="flowPara1459">turn on: restore prev send</flowPara><flowPara
+         id="flowPara2242">- Lower sensitivity of loop size</flowPara><flowPara
          style="font-size:21.33333397px"
          id="flowPara1439" /></flowRoot>  </g>
   <g
