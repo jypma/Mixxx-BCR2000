@@ -92,32 +92,33 @@ function withDefaults(settings, defaults) {
 }
 
 function getCfg(key) {
-    var keyInfo = {
-      rate: { minimum: -1, maximum: 1, step: 0.001 },
-      jog: { minimum: -3, maximum: 3, step: 0.1, accellerationLimit: 30, accelleration: 1.1 },
-      playposition: { step: 0.00003, accellerationLimit: 500, accelleration: 1.4 },
-      beats_translate: { step: 1, accelleration: 2, up: "beats_translate_later", down: "beats_translate_earlier"},
-      pitch: { minimum: -6, maximum: 6, step: 0.01, accelleration: 1.1 },
-      scratch: { step: 1, accelleration: 2, accellerationLimit: 4 },
-      super1: { accelleration: 1.1 },
-      pregain: { maximum: 4 },
-      loop_move: { minimum: -1, accelleration: 1.1, reset: true },
-      loop_factor2: { step: 1, accelleration: 0, up: "loop_double", down: "loop_halve" },
-      headVolume: { maximum: 5 },
-      headMix: { minimum: -1, maximum: 1, step: 0.03 },
-      SelectTrackKnob: { minimum: -25, maximum: 25, step: 1, accelleration: 1.3, accellerationLimit: 16, reset: true }
-    };
+  var keyInfo = {
+    rate: { minimum: -1, maximum: 1, step: 0.001 },
+    jog: { minimum: -3, maximum: 3, step: 0.1, accellerationLimit: 30, accelleration: 1.1 },
+    playposition: { step: 0.00003, accellerationLimit: 500, accelleration: 1.4 },
+    beats_translate: { step: 1, accelleration: 2, up: "beats_translate_later", down: "beats_translate_earlier"},
+    pitch: { minimum: -6, maximum: 6, step: 0.01, accelleration: 1.1 },
+    scratch: { step: 1, accelleration: 2, accellerationLimit: 4 },
+    super1: { accelleration: 1.1, stopAtMiddle: true },
+    pregain: { maximum: 4 },
+    loop_move: { minimum: -1, accelleration: 1.1, reset: true },
+    loop_factor2: { step: 1, accelleration: 0, up: "loop_double", down: "loop_halve" },
+    headVolume: { maximum: 5 },
+    headMix: { minimum: -1, maximum: 1, step: 0.03 },
+    SelectTrackKnob: { minimum: -25, maximum: 25, step: 1, accelleration: 1.3, accellerationLimit: 16, reset: true }
+  };
     
-    return withDefaults(keyInfo[key], {
-        step: 0.01,
-        accelleration: 1.2,
-        accellerationLimit: 10,
-        minimum: 0,
-        maximum: 1,
-        up: undefined,
-        down: undefined,
-        reset: false
-    });
+  return withDefaults(keyInfo[key], {
+    stopAtMiddle: false,
+    step: 0.01,
+    accelleration: 1.2,
+    accellerationLimit: 10,
+    minimum: 0,
+    maximum: 1,
+    up: undefined,
+    down: undefined,
+    reset: false
+  });
 }
 
 function resolveGroupFn(groupFn) {
@@ -167,13 +168,26 @@ function encoder(key, groupFn) {
           var v = engine.getValue(group, key) + delta * accel;
           if (v < cfg.minimum) v = cfg.minimum;
           if (v > cfg.maximum) v = cfg.maximum;
-          script.midiDebug(0, 0, v, 0, "writing to " + group + ":" + key + "=" + v + " accel=" + accel);
+          script.midiDebug(0, 0, v, 0, "writing value to " + group + ":" + key + "=" + v + " accel=" + accel);
           engine.setValue(group, key, v);
         } else {
-          var v = engine.getParameter(group, key) + delta * accel;
+          var vOld = engine.getParameter(group, key);
+          var v = vOld + delta * accel;
+          if (cfg.stopAtMiddle) {
+            print("m")
+            if (vOld < 0.5 && v > 0.5) {
+              print("<")
+              v = 0.5;
+              accel = 0;
+            } else if (vOld > 0.5 && v < 0.5) {
+              print(">")
+              v = 0.5;
+              accel = 0;
+            }
+          }
           if (v < 0) v = 0;
           if (v > 1) v = 1;
-          script.midiDebug(0, 0, v, 0, "writing to " + group + ":" + key + "=" + v + " accel=" + accel);
+          script.midiDebug(0, 0, v, 0, "writing param to " + group + ":" + key + "=" + v + " accel=" + accel);
           engine.setParameter(group, key, v);
         }
         
