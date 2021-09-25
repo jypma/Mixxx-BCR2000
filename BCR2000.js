@@ -1,5 +1,8 @@
 /* 
 
+TODO:
+  - Stopping an FX resets it, can't reenable again
+
 OK fx
 - Bitcrusher : Bitdepth, Samplerate
 - Echo       : Send, Delay, Feedback, Pingpong
@@ -91,7 +94,7 @@ function withDefaults(settings, defaults) {
     return result;
 }
 
-function getCfg(key) {
+function getCfg(key, group) {
   var keyInfo = {
     rate: { minimum: -1, maximum: 1, step: 0.001 },
     jog: { minimum: -3, maximum: 3, step: 0.1, accellerationLimit: 30, accelleration: 1.1 },
@@ -107,8 +110,12 @@ function getCfg(key) {
     headMix: { minimum: -1, maximum: 1, step: 0.03 },
     SelectTrackKnob: { minimum: -25, maximum: 25, step: 1, accelleration: 1.3, accellerationLimit: 16, reset: true }
   };
+
+  var groupInfo = {
+    "[EqualizerRack1_X_Effect1]": { stopAtMiddle: true }
+  };
     
-  return withDefaults(keyInfo[key], {
+  return withDefaults(groupInfo[group], withDefaults(keyInfo[key], {
     stopAtMiddle: false,
     step: 0.01,
     accelleration: 1.2,
@@ -118,7 +125,7 @@ function getCfg(key) {
     up: undefined,
     down: undefined,
     reset: false
-  });
+  }));
 }
 
 function resolveGroupFn(groupFn) {
@@ -133,7 +140,7 @@ function resolveGroupFn(groupFn) {
 function encoder(key, groupFn) {
     groupFn = resolveGroupFn(groupFn);
 
-    var cfg = getCfg(key);
+    var cfg = getCfg(key, groupFn("X"));
     var accel = 1.0;
     var lastMsg = 0;
     
@@ -307,8 +314,6 @@ function Shifter(levels) {
       }
     }
   }
-    
-    // TODO write increment, decrement functions to bind to buttons to inc/dec the shifter value.
     
     // Should be bound to a button that emits the given value when held down,
     // returning to levels[0] when released.
