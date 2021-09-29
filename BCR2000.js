@@ -1,4 +1,4 @@
-/* 
+/*
 
 TODO:
   - Stopping an FX resets it, can't reenable again
@@ -97,7 +97,7 @@ function withDefaults(settings, defaults) {
 function getCfg(key, group) {
   var keyInfo = {
     rate: { minimum: -1, maximum: 1, step: 0.001 },
-    jog: { minimum: -3, maximum: 3, step: 0.1, accellerationLimit: 30, accelleration: 1.1 },
+    jog: { minimum: -3, maximum: 3, step: 0.1, accellerationLimit: 30, accelleration: 1.5 },
     playposition: { step: 0.00003, accellerationLimit: 500, accelleration: 1.4 },
     beats_translate: { step: 1, accelleration: 2, up: "beats_translate_later", down: "beats_translate_earlier"},
     pitch: { minimum: -6, maximum: 6, step: 0.01, accelleration: 1.1 },
@@ -454,6 +454,10 @@ function Control(key) {
 }
 
 var BCR2000 = (function () {
+  // We use this as mapping for button LEDs in shift states that don't have output,
+  // so the button is always OFF there (since we don't use hotcue 8)
+  function alwaysOff(group) { return { group: group, key:"hotcue_8_enabled" } };
+
     function eqForChannel(group) { return "[EqualizerRack1_" + group + "_Effect1]"; }
     function filterForChannel(group) { return "[QuickEffectRack1_" + group + "]"; }
     function fxChainForChannel(group) { 
@@ -498,7 +502,10 @@ var BCR2000 = (function () {
       ], compose: function(a,b) {
         return (a < 1) || (b < 1) ? 1.0 : 0.0;
       } },
-      a: { group: group, key:"hotcue_1_enabled" }
+      a: { group: group, key:"hotcue_1_enabled" },
+      b: alwaysOff(group),
+      c: alwaysOff(group),
+      d: alwaysOff(group)
     };
   }
 
@@ -508,7 +515,9 @@ var BCR2000 = (function () {
         return (v > 0) ? 1.0 : 0.0;
       } },
       a: { group: group, key:"hotcue_2_enabled" },
-      b: { group: group, key:"beatsync" }
+      b: { group: group, key:"beatsync" },
+      c: alwaysOff(group),
+      d: alwaysOff(group)
     };
   }
 
@@ -518,15 +527,19 @@ var BCR2000 = (function () {
         return (v > 0) ? 1.0 : 0.0;
       } },
       a: { group: group, key:"hotcue_3_enabled" },
-      b: { group: group, key:"play_indicator" }
+      b: { group: group, key:"play_indicator" },
+      c: alwaysOff(group),
+      d: alwaysOff(group)
     };
   }
 
     function button4Out(group) {
         return {
-            o: { group: group, key:"loop_enabled" },                            
-            a: { group: group, key:"hotcue_4_enabled" },        
-            b: { group: group, key:"pfl" }                            
+          o: { group: group, key:"loop_enabled" },
+          a: { group: group, key:"hotcue_4_enabled" },
+          b: { group: group, key:"pfl" },
+          c: alwaysOff(group),
+          d: alwaysOff(group)
         };
     }
 
