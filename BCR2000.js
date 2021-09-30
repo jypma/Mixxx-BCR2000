@@ -9,7 +9,7 @@ New buttons:
   - OR move Echo down 1 effect: [EffectRack1_EffectUnitN_EffectM]effect_selector
 
   - Cue points 5 and 6
-  - Beat jump 1
+  - Move over Beat jump 1 (perhaps)
   - Move Quantize there (no good under the push encoder for gridding, that' setup)
 
 */
