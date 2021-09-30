@@ -3,87 +3,16 @@
 TODO:
   - Stopping an FX resets it, can't reenable again
 
-OK fx
-- Bitcrusher : Bitdepth, Samplerate
-- Echo       : Send, Delay, Feedback, Pingpong
-- Reverb     : Bandwidth, Damping
-+ Mix (Reverb is full-on)
+New buttons:
+  - Switch BitCrusher to metronome:  [EqualizerRack1_[ChannelI]]chain_selector switch EQ to metronome?
+  - OR change to a preset with Metronome instead of Echo:   [EffectRack1_EffectUnitN]chain_selector  , OR  [EqualizerRack1_[ChannelI]]chain_selector
+  - OR move Echo down 1 effect: [EffectRack1_EffectUnitN_EffectM]effect_selector
 
-- All encoders are CC, REL2
-- All buttons are Note, tOff
-- All LED feedback is done by Mixxx, BCR2000 itself doesn't decide that.
-- This JS introduces fake controls "scratch" and "scratch_enable" that work as expected,
-  instead of having to do the explicit JS scratch stuff the wiki mentions.
+  - Cue points 5 and 6
+  - Beat jump 1
+  - Move Quantize there (no good under the push encoder for gridding, that' setup)
 
-Layout:
-
----- Globals   -----
-
-  <>                  <>                  <>                  <>                  
-0 Master              Cue vol             Cue / mix           Browse
-A                                                             Seek preview
-B  
-C
-D  
-  []                  []                  []                  []                  
-0                                                             Preview
-A  
-B  
-C
-D  
-
----- Each deck -----
-
-  <>   
-0     Pitch bend / output VU   
-A     Rate
-B     Seek
-C     Key
-D     Move beatgrid
-  <> (press)  
-0     Scratch
-A     Reset rate
-B     Cue
-C     Reset key
-D     Quantize on/off
-  []                  []
-0 Bitcrusher          Echo
-A Cue 1               Cue 2
-B Load                Sync
-C Jump <4             Jump >4
-D Loop 4              Loop 16
-  []                  []
-0 Reverb              Loop act
-A Cue 3               Cue 4
-B Play                PFL
-C Jump <16            Jump >16
-D Jump <1             Jump >1
-  <>                  <>
-0 Volume              High
-A Gain                Bitcrusher:depth
-B                     Echo:send
-C                     Reverb:bandwidth
-D Move loop           
-  <>                  <>
-0 Filter              Mid
-A                     Bitcrusher:sample rate
-B                     Echo:delay
-C                     Reverb:damping
-D Size loop (/2, *2) 
-  <>                  <>
-0 FX Dry/wet          Low
-A     "               
-B     "               Echo:feedback
-C     "
-D     "
-
-- Consider A -> B to activate another shift level for cues 5..8
-  and for sync master
-- Blink VU meter (FAST), or all 4 buttons, or ... when nearing end of track
-- Blink loop button when loop created, inactive, and playhead in loop
-- Add outputs for all shift states, or default to just off
 */
-
 
 function withDefaults(settings, defaults) {
     if (settings === undefined) settings = {};
@@ -99,7 +28,7 @@ function getCfg(key, group) {
     rate: { minimum: -1, maximum: 1, step: 0.001 },
     jog: { minimum: -3, maximum: 3, step: 0.1, accellerationLimit: 30, accelleration: 1.5 },
     playposition: { step: 0.00003, accellerationLimit: 500, accelleration: 1.4 },
-    beats_translate: { step: 1, accelleration: 2, up: "beats_translate_later", down: "beats_translate_earlier"},
+    beats_translate: { step: 0.2, accelleration: 1, up: "beats_translate_later", down: "beats_translate_earlier"},
     pitch: { minimum: -6, maximum: 6, step: 0.01, accelleration: 1.1 },
     scratch: { step: 1, accelleration: 2, accellerationLimit: 4 },
     super1: { accelleration: 1.1, stopAtMiddle: true },
@@ -108,7 +37,7 @@ function getCfg(key, group) {
     loop_factor2: { step: 1, accelleration: 0, up: "loop_double", down: "loop_halve" },
     headVolume: { maximum: 5 },
     headMix: { minimum: -1, maximum: 1, step: 0.03 },
-    SelectTrackKnob: { minimum: -25, maximum: 25, step: 1, accelleration: 1.3, accellerationLimit: 16, reset: true }
+    SelectTrackKnob: { minimum: -25, maximum: 25, step: 1, accelleration: 1.3, accellerationLimit: 16, reset: true },
   };
 
   var groupInfo = {
@@ -455,8 +384,8 @@ function Control(key) {
 
 var BCR2000 = (function () {
   // We use this as mapping for button LEDs in shift states that don't have output,
-  // so the button is always OFF there (since we don't use hotcue 8)
-  function alwaysOff(group) { return { group: group, key:"hotcue_8_enabled" } };
+  // so the button is always OFF there (since we don't use mute)
+  function alwaysOff(group) { return { group: group, key:"mute" } };
 
     function eqForChannel(group) { return "[EqualizerRack1_" + group + "_Effect1]"; }
     function filterForChannel(group) { return "[QuickEffectRack1_" + group + "]"; }
@@ -490,7 +419,7 @@ var BCR2000 = (function () {
             a: { group: group, key:"rate"},
             b: { group: group, key:"playposition"},
             c: { group: group, key:"pitch"},
-            d: { group: group, key:"beat_active"}
+            d: { group: group, key:"beat_distance"}
         };
     }
     
