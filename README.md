@@ -14,13 +14,13 @@ This repository contains a [Mixxx](https://mixxx.org) preset for using the Behri
 
 ## Print and apply the overlay
 
-- Print the `bcr2000_mixxx.svg` and `bcr2000_mixxx_2.svg` files on two pieces of paper, e.g. using [Inkscape](https://inkscape.org/). The colors have been picked so they come out somewhat legible on my color laser printer; feel free to tweak the SVG's if needed.
+- Print the [`bcr2000_mixxx.svg`](bcr2000_mixxx.svg) and [`bcr2000_mixxx_2.svg`](bcr2000_mixxx_2.svg) files on two pieces of paper, e.g. using [Inkscape](https://inkscape.org/). The colors have been picked so they come out somewhat legible on my color laser printer; feel free to tweak the SVG's if needed.
 - Cut the overlays out a knife (also cutting the holes for the buttons and encoders)
 - Apply the 3 overlay pieces to the top encoders, main encoders, and bottom-right 4-button section.
 
 ## Install the preset in Mixxx
 
-- Place the `BCR2000.js` and `BCR2000_MIDI_1.midi.xml` files into your Mixxx's `controllers` directory. Depending on your operating system, this is:
+- Place the [`BCR2000.js`](BCR2000.js) and [`BCR2000_MIDI_1.midi.xml`](BCR2000_MIDI_1.midi.xml) files into your Mixxx's `controllers` directory. Depending on your operating system, this is:
 
   * Linux: `/home/<username>/.mixxx/controllers`
   * macOS: `/Users/<username>/Library/ApplicationSupport/Mixxx/controllers`
