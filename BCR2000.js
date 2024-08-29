@@ -30,7 +30,7 @@ function getCfg(key, group) {
   var keyInfo = {
     rate: { minimum: -1, maximum: 1, step: 0.001 },
     jog: { minimum: -3, maximum: 3, step: 0.1, accellerationLimit: 30, accelleration: 1.5 },
-    playposition: { step: 0.001, accellerationLimit: 8, accelleration: 1.4 },
+    playposition: { step: 0.001, accellerationLimit: 32, accelleration: 1.2, minInterval: 50 },
     beats_translate: { step: 0.2, accelleration: 1, up: "beats_translate_later", down: "beats_translate_earlier"},
     beats_adjust: { step: 0.2, accelleration: 1, up: "beats_adjust_slower", down: "beats_adjust_faster"},
     pitch: { minimum: -6, maximum: 6, step: 0.01, accelleration: 1.1 },
@@ -58,7 +58,8 @@ function getCfg(key, group) {
     maximum: 1,
     up: undefined,
     down: undefined,
-    reset: false
+    reset: false,
+    minInterval: undefined
   }));
 }
 
@@ -74,24 +75,34 @@ function resolveGroupFn(groupFn) {
 function encoder(key, groupFn, onChange) {
     groupFn = resolveGroupFn(groupFn);
 
-    var cfg = getCfg(key, groupFn("X"));
-    var accel = 1.0;
-    var lastMsg = 0;
+  var cfg = getCfg(key, groupFn("X"));
+  var accel = 1.0;
+  var lastMsg = 0;
+  var lastAccelMsg = 0;
+  var lastValue = 0;
     
     return function (channel, control, value, status, group) {
-        if (onChange) { onChange(value, group); }
-        group = groupFn(group);
+      var now = new Date().getTime();
 
-        if ((new Date().getTime()) - lastMsg < 100) {
-            accel = accel * cfg.accelleration;
-            if (accel > cfg.accellerationLimit) {
-                accel = cfg.accellerationLimit;
-            }
-        } else {
-            accel = 1.0;
+      if ((value == lastValue) && (now - lastAccelMsg < 100)) {
+        accel = accel * cfg.accelleration;
+        if (accel > cfg.accellerationLimit) {
+          accel = cfg.accellerationLimit;
         }
-        
-        lastMsg = new Date().getTime();
+      } else {
+        accel = 1.0;
+      }
+
+      lastValue = value;
+      lastAccelMsg = now;
+      if ((cfg.minInterval) && ((now - lastMsg) < cfg.minInterval)) {
+        return;
+      }
+
+      if (onChange) { onChange(value, group); }
+      group = groupFn(group);
+
+      lastMsg = now;
         var delta = (value > 64) ? cfg.step : -cfg.step;
         if (key == "scratch") { // scratch must be done through JS...for some reason
           var deck = group[8] - '1' + 1;
