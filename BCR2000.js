@@ -42,6 +42,7 @@ function getCfg(key, group) {
     headMix: { minimum: -1, maximum: 1, step: 0.03 },
     bpm: { minimum: 80, maximum: 180, step: 0.01, accellerationLimit: 8 },
     SelectTrackKnob: { minimum: -25, maximum: 25, step: 1, accelleration: 1.1, accellerationLimit: 64, reset: true },
+    SelectPlaylist: { minimum: -25, maximum: 25, step: 1, accelleration: 1, accellerationLimit: 1, reset: true },
   };
 
   var groupInfo = {
@@ -219,7 +220,7 @@ function Shifter(levels) {
     }
     if (connected[group][key] === undefined) {
       connected[group][key] = {};
-      engine.connectControl(group, key, function(value) {
+      engine.makeConnection(group, key, function(value) {
         var callbacks = connected[group][key][currentValue];
         //print(group + " / " + key + " calling " + callbacks);
         if (callbacks != undefined) {
@@ -424,7 +425,7 @@ var BCR2000 = (function () {
 
     function pushEncoder1Out(group) {
         return {
-            o: { group: group, key:"VuMeter"},
+            o: { group: group, key:"vu_meter"},
             a: { group: group, key:"rate"},
             b: { group: group, key:"playposition"},
             c: { group: group, key:"pitch"},
@@ -440,7 +441,7 @@ var BCR2000 = (function () {
       ], compose: function(a,b) {
         return (a < 1) || (b < 1) ? 1.0 : 0.0;
       } },
-      a: { group: group, key:"hotcue_1_enabled" },
+      a: { group: group, key:"hotcue_1_status" },
       b: alwaysOff(group),
       c: alwaysOff(group),
       d: alwaysOff(group)
@@ -452,7 +453,7 @@ var BCR2000 = (function () {
       o: { group: channelFx(2)(group), key: "parameter4", compose: function(v) {
         return (v > 0) ? 1.0 : 0.0;
       } },
-      a: { group: group, key:"hotcue_2_enabled" },
+      a: { group: group, key:"hotcue_2_status" },
       b: { group: group, key:"beatsync" },
       c: alwaysOff(group),
       d: alwaysOff(group)
@@ -464,7 +465,7 @@ var BCR2000 = (function () {
       o: { group: channelFx(3)(group), key: "parameter4", compose: function(v) {
         return (v > 0) ? 1.0 : 0.0;
       } },
-      a: { group: group, key:"hotcue_3_enabled" },
+      a: { group: group, key:"hotcue_3_status" },
       b: { group: group, key:"play_indicator" },
       c: alwaysOff(group),
       d: alwaysOff(group)
@@ -474,7 +475,7 @@ var BCR2000 = (function () {
     function button4Out(group) {
         return {
           o: { group: group, key:"loop_enabled" },
-          a: { group: group, key:"hotcue_4_enabled" },
+          a: { group: group, key:"hotcue_4_status" },
           b: { group: group, key:"pfl" },
           c: alwaysOff(group),
           d: alwaysOff(group)
@@ -579,16 +580,16 @@ var BCR2000 = (function () {
           shift1.connectCC(0x17, encoder6Out("[Channel4]"));
           
           shift1.connectCC(0x28, {
-              o: { group: "[Master]", key: "volume" }
+              o: { group: "[Master]", key: "gain" }
           });
           shift1.connectCC(0x2A, {
-              o: { group: "[Master]", key: "headVolume" }
+              o: { group: "[Master]", key: "headGain" }
           });
           shift1.connectCC(0x2C, {
               o: { group: "[Master]", key: "headMix" }
           });
           shift1.connectCC(0x2E, {
-              o: { group: "[PreviewDeck1]", key: "VuMeter" },
+              o: { group: "[PreviewDeck1]", key: "vu_meter" },
               a: { group: "[PreviewDeck1]", key: "playposition" }
           });
           
@@ -605,9 +606,14 @@ var BCR2000 = (function () {
         },
         shutdown: function() {},
         
-        shiftA: shift1.holdFor("a"),
-        shiftB: shift1.holdFor("b"),
-        shiftC: shift1.holdFor("c"),
+      shiftA: shift1.holdFor("a", function(value) {
+        if (value == 0){
+          // Focus back on library when we're done browsing
+          engine.setValue("[Library]", "focused_widget", 3);
+        }
+      }),
+      shiftB: shift1.holdFor("b"),
+      shiftC: shift1.holdFor("c"),
       shiftD: shift1.holdFor("d", function(value) {
         if (value == 0) {
           // Reset FX back to Bitcrusher
@@ -617,7 +623,7 @@ var BCR2000 = (function () {
           resetShiftFX.clear();
         }
       }),
-        
+
         pushEncoder1: shift1.map({
             o: scratch_enable.map({ // TODO test activate slip mode while scratching?
                 off: encoder("jog"),
@@ -713,11 +719,16 @@ var BCR2000 = (function () {
         }),
         globalPushEncoder4: shift1.map({
           o: encoder("SelectTrackKnob", "[Playlist]"),
+          a: encoder("SelectPlaylist", "[Playlist]"),
           b: encoder("playposition", "[PreviewDeck1]")
         }),
         globalPushEncoder4Btn: shift1.map({
           o: buttonToggle("LoadSelectedTrackAndPlay", "[PreviewDeck1]"), // TODO stop if playing same
-          a: buttonToggle("show_maximized_library", "[Skin]")
+          a: buttonHold("GoToItem", "[Library]", function() {
+            // Focus the tree before expanding / collapsing
+            engine.setValue("[Library]", "focused_widget", 2);
+          }),
+          d: buttonToggle("show_maximized_library", "[Skin]")
         })
         
     };
