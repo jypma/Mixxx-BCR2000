@@ -84,7 +84,7 @@ function encoder(key, groupFn, onChange) {
     return function (channel, control, value, status, group) {
       var now = new Date().getTime();
 
-      if ((value == lastValue) && (now - lastAccelMsg < 100)) {
+      if ((now - lastAccelMsg < 100)) {
         accel = accel * cfg.accelleration;
         if (accel > cfg.accellerationLimit) {
           accel = cfg.accellerationLimit;
