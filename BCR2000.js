@@ -32,6 +32,7 @@ function getCfg(key, group) {
     jog: { minimum: -3, maximum: 3, step: 0.1, accellerationLimit: 30, accelleration: 1.5 },
     playposition: { step: 0.001, accellerationLimit: 8, accelleration: 1.4 },
     beats_translate: { step: 0.2, accelleration: 1, up: "beats_translate_later", down: "beats_translate_earlier"},
+    beats_adjust: { step: 0.2, accelleration: 1, up: "beats_adjust_slower", down: "beats_adjust_faster"},
     pitch: { minimum: -6, maximum: 6, step: 0.01, accelleration: 1.1 },
     scratch: { step: 1, accelleration: 2, accellerationLimit: 4 },
     super1: { accelleration: 1.1, stopAtMiddle: true },
@@ -40,7 +41,6 @@ function getCfg(key, group) {
     loop_factor2: { step: 1, accelleration: 0, up: "loop_double", down: "loop_halve" },
     headVolume: { maximum: 5 },
     headMix: { minimum: -1, maximum: 1, step: 0.03 },
-    bpm: { minimum: 80, maximum: 180, step: 0.01, accellerationLimit: 8 },
     SelectTrackKnob: { minimum: -25, maximum: 25, step: 1, accelleration: 1.1, accellerationLimit: 64, reset: true },
     SelectPlaylist: { minimum: -25, maximum: 25, step: 1, accelleration: 1, accellerationLimit: 1, reset: true },
   };
@@ -693,7 +693,7 @@ var BCR2000 = (function () {
           a: encoder("parameter2", channelFx(1)), // bc sample rate
           b: encoder("parameter1", channelFx(2)), // echo time/delay
           c: encoder("parameter1", channelFx(3)), // reverb decay
-          d: encoder("bpm", undefined, shiftToMetronome)
+          d: encoder("beats_adjust", undefined, shiftToMetronome)
         }),
         encoder5: encoder("mix", fxChainForChannel),
         encoder6: shift1.map({
