@@ -2,21 +2,21 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="297mm"
    height="210mm"
    viewBox="0 0 1052.3622 744.09448"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.2 2405546, 2018-03-11"
-   sodipodi:docname="bcr2000_mixxx.svg">
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   sodipodi:docname="bcr2000_mixxx.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -26,19 +26,22 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="567.40593"
-     inkscape:cy="545.15795"
+     inkscape:zoom="6.3824717"
+     inkscape:cx="791.3862"
+     inkscape:cy="190.60014"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="2876"
-     inkscape:window-height="1568"
+     inkscape:window-width="3840"
+     inkscape:window-height="2085"
      inkscape:window-x="0"
-     inkscape:window-y="24"
-     inkscape:window-maximized="0" />
+     inkscape:window-y="34"
+     inkscape:window-maximized="0"
+     inkscape:showpageshadow="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -200,7 +203,7 @@
          id="tspan4240-4"
          x="137.7093"
          y="557.85004"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Cue 1</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Cue 1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -211,7 +214,7 @@
          id="tspan4240-4-5"
          x="145.70575"
          y="557.85004"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#fff977;fill-opacity:1">Load</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1">Load</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -222,7 +225,7 @@
          id="tspan4240-4-1"
          x="135.81931"
          y="571.13892"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#7dff78;fill-opacity:1">Jump &lt;4</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1">Jump &lt;4</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -233,14 +236,14 @@
          id="tspan4240-4-8"
          x="146.27576"
          y="571.13892"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#7fbeff;fill-opacity:1">Loop 4</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1">Loop 4</tspan></text>
     <text
        id="text4294"
        y="557.85004"
        x="238.31573"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
          y="557.85004"
          x="237.11574"
          id="tspan4296"
@@ -251,7 +254,7 @@
        x="246.77719"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#fff977;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1"
          y="557.85004"
          x="246.77719"
          id="tspan4300"
@@ -262,7 +265,7 @@
        x="238.09073"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#7dff78;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1"
          y="571.13892"
          x="236.89073"
          id="tspan4304"
@@ -278,7 +281,7 @@
        x="247.3472"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#7fbeff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1"
          y="571.13892"
          x="247.3472"
          id="tspan4308"
@@ -289,7 +292,7 @@
        x="138.9093"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
          y="624.99292"
          x="137.7093"
          id="tspan4338"
@@ -300,7 +303,7 @@
        x="145.70575"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#fff977;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1"
          y="624.99292"
          x="145.70575"
          id="tspan4342"
@@ -311,7 +314,7 @@
        x="137.0193"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#7dff78;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1"
          y="638.2818"
          x="135.81931"
          id="tspan4346"
@@ -322,7 +325,7 @@
        x="146.27576"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#7fbeff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1"
          y="638.2818"
          x="146.27576"
          id="tspan4350"
@@ -337,7 +340,7 @@
          id="tspan4376"
          x="239.13786"
          y="624.99292"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Cue 4</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Cue 4</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -348,7 +351,7 @@
          id="tspan4380"
          x="247.13431"
          y="624.99292"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#fff977;fill-opacity:1">PFL</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1">PFL</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -359,7 +362,7 @@
          id="tspan4384"
          x="237.24788"
          y="638.2818"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#7dff78;fill-opacity:1">Jump &gt;16</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1">Jump &gt;16</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -370,7 +373,7 @@
          id="tspan4388"
          x="247.70432"
          y="638.2818"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#7fbeff;fill-opacity:1">Jump &gt;1</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1">Jump &gt;1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -381,14 +384,14 @@
          id="tspan4240-4-4"
          x="142.6123"
          y="389.99579"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:center;letter-spacing:-1.20000005px;text-anchor:middle;fill:#ffffff;fill-opacity:1">Bend </tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:center;letter-spacing:-1.2px;text-anchor:middle;fill:#ffffff;fill-opacity:1">Bend </tspan></text>
     <text
        id="text4424"
        y="486.27866"
        x="114.6236"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
          y="486.27866"
          x="113.4236"
          id="tspan4426"
@@ -399,7 +402,7 @@
        x="170.52565"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#fff977;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1"
          y="488.04794"
          x="170.52565"
          id="tspan4430"
@@ -410,30 +413,19 @@
        x="131.62909"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#7dff78;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1"
          y="497.88132"
          x="130.42909"
          id="tspan4434"
          sodipodi:role="line">Key</tspan></text>
     <text
-       id="text4436"
-       y="498.26013"
-       x="145.17198"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#7fbeff;fill-opacity:1"
-         y="498.26013"
-         x="145.17198"
-         sodipodi:role="line"
-         id="tspan4440">Grid </tspan></text>
-    <text
        id="text4436-6"
-       y="505.46844"
+       y="504.72894"
        x="137.88419"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.69999999px;fill:#7fbeff;fill-opacity:1"
-         y="505.46844"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.7px;fill:#7fbeff;fill-opacity:1"
+         y="504.72894"
          x="137.88419"
          sodipodi:role="line"
          id="tspan4440-6">⤓Quantize</tspan></text>
@@ -454,7 +446,7 @@
        x="153.14056"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.67000002px;fill:#ffffff;fill-opacity:1"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.67px;fill:#ffffff;fill-opacity:1"
          y="393.73566"
          x="153.14056"
          sodipodi:role="line"
@@ -465,7 +457,7 @@
        x="242.34746"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:center;letter-spacing:-1.20000005px;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:center;letter-spacing:-1.2px;text-anchor:middle;fill:#ffffff;fill-opacity:1"
          y="389.99579"
          x="241.74745"
          id="tspan4607"
@@ -480,14 +472,14 @@
          id="tspan4611"
          x="445.29318"
          y="389.99579"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:center;letter-spacing:-1.20000005px;text-anchor:middle;fill:#ffffff;fill-opacity:1">Cue</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:center;letter-spacing:-1.2px;text-anchor:middle;fill:#ffffff;fill-opacity:1">Cue</tspan></text>
     <text
        id="text4613"
        y="389.99579"
        x="648.9339"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:center;letter-spacing:-1.20000005px;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:center;letter-spacing:-1.2px;text-anchor:middle;fill:#ffffff;fill-opacity:1"
          y="389.99579"
          x="648.33392"
          id="tspan4615"
@@ -502,7 +494,7 @@
          id="tspan4619"
          x="851.37457"
          y="389.99579"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:center;letter-spacing:-1.20000005px;text-anchor:middle;fill:#ffffff;fill-opacity:1">Browse</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:center;letter-spacing:-1.2px;text-anchor:middle;fill:#ffffff;fill-opacity:1">Browse</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -513,14 +505,14 @@
          sodipodi:role="line"
          x="867.94977"
          y="394.24072"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.67000002px;fill:#ffffff;fill-opacity:1">⤓Preview</tspan></text>
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.67px;fill:#ffffff;fill-opacity:1">⤓Preview</tspan></text>
     <text
        id="text4859"
        y="524.84338"
        x="313.53113"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1"
          y="524.84338"
          x="312.33112"
          id="tspan4861"
@@ -531,7 +523,7 @@
        x="340.43472"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
          y="557.85004"
          x="339.23471"
          id="tspan4865"
@@ -542,7 +534,7 @@
        x="347.23117"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#fff977;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1"
          y="557.85004"
          x="347.23117"
          id="tspan4869"
@@ -553,7 +545,7 @@
        x="338.54471"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#7dff78;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1"
          y="571.13892"
          x="337.3447"
          id="tspan4873"
@@ -564,7 +556,7 @@
        x="347.80118"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#7fbeff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1"
          y="571.13892"
          x="347.80118"
          id="tspan4877"
@@ -579,7 +571,7 @@
          id="tspan4881"
          x="438.64114"
          y="557.85004"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Cue 2</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Cue 2</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -590,7 +582,7 @@
          id="tspan4885"
          x="448.30261"
          y="557.85004"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#fff977;fill-opacity:1">Sync</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1">Sync</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -601,7 +593,7 @@
          id="tspan4889"
          x="438.41614"
          y="571.13892"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#7dff78;fill-opacity:1">Jump &gt;4</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1">Jump &gt;4</tspan></text>
     <path
        style="display:inline;fill:#6e005d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 488.73836,571.5087 c 0,0 -2.67856,9.70982 -7.53348,10.04466 -4.8549,0.33481 -5.02233,21.93079 -0.33481,22.0982 4.6875,0.16743 8.53794,7.03126 8.70536,10.04466 0.16741,3.01337 -0.83707,-42.18752 -0.83707,-42.18752 z"
@@ -617,7 +609,7 @@
          id="tspan4893"
          x="448.87262"
          y="571.13892"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#7fbeff;fill-opacity:1">Loop 16</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1">Loop 16</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -628,7 +620,7 @@
          id="tspan4897"
          x="414.03928"
          y="531.40936"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1">Delay</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1">Delay</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -639,7 +631,7 @@
          id="tspan4901"
          x="311.43277"
          y="598.55219"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1">Reverb</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1">Reverb</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -650,7 +642,7 @@
          id="tspan4905"
          x="339.23471"
          y="624.99292"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Cue 3</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Cue 3</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -661,7 +653,7 @@
          id="tspan4909"
          x="347.23117"
          y="624.99292"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#fff977;fill-opacity:1">Play</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1">Play</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -672,7 +664,7 @@
          id="tspan4913"
          x="337.3447"
          y="638.2818"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#7dff78;fill-opacity:1">Jump &lt;16</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1">Jump &lt;16</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -683,14 +675,14 @@
          id="tspan4917"
          x="347.80118"
          y="638.2818"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#7fbeff;fill-opacity:1">Jump &lt;1</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1">Jump &lt;1</tspan></text>
     <text
        id="text4919"
        y="598.55219"
        x="415.19031"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1"
          y="598.55219"
          x="413.9903"
          id="tspan4921"
@@ -701,7 +693,7 @@
        x="441.86328"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
          y="624.99292"
          x="440.66327"
          id="tspan4925"
@@ -712,7 +704,7 @@
        x="448.65973"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#fff977;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1"
          y="624.99292"
          x="448.65973"
          id="tspan4929"
@@ -723,7 +715,7 @@
        x="439.9733"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#7dff78;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1"
          y="638.2818"
          x="438.77328"
          id="tspan4933"
@@ -734,7 +726,7 @@
        x="449.22974"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#7fbeff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1"
          y="638.2818"
          x="449.22974"
          id="tspan4937"
@@ -745,7 +737,7 @@
        x="343.87286"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:center;letter-spacing:-1.20000005px;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:center;letter-spacing:-1.2px;text-anchor:middle;fill:#ffffff;fill-opacity:1"
          y="389.99579"
          x="344.1377"
          id="tspan4941"
@@ -760,7 +752,7 @@
          id="tspan4945"
          x="314.94901"
          y="486.27866"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Rate</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Rate</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -771,7 +763,7 @@
          id="tspan4949"
          x="372.05106"
          y="488.04794"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#fff977;fill-opacity:1">Seek</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1">Seek</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -782,29 +774,18 @@
          id="tspan4953"
          x="331.9545"
          y="497.88132"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#7dff78;fill-opacity:1">Key</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="346.69739"
-       y="498.26013"
-       id="text4955"><tspan
-         id="tspan4957"
-         sodipodi:role="line"
-         x="346.69739"
-         y="498.26013"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#7fbeff;fill-opacity:1">Grid </tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1">Key</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="339.40961"
-       y="505.46844"
+       y="504.72894"
        id="text4959"><tspan
          id="tspan4961"
          sodipodi:role="line"
          x="339.40961"
-         y="505.46844"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.69999999px;fill:#7fbeff;fill-opacity:1">⤓Quantize</tspan></text>
+         y="504.72894"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.7px;fill:#7fbeff;fill-opacity:1">⤓Quantize</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -826,7 +807,7 @@
          sodipodi:role="line"
          x="354.66599"
          y="393.73566"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.67000002px;fill:#ffffff;fill-opacity:1">⤓Scratch</tspan></text>
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.67px;fill:#ffffff;fill-opacity:1">⤓Scratch</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -837,7 +818,7 @@
          id="tspan4977"
          x="542.27539"
          y="557.85004"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Cue 1</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Cue 1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -848,7 +829,7 @@
          id="tspan4981"
          x="550.27185"
          y="557.85004"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#fff977;fill-opacity:1">Load</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1">Load</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -859,7 +840,7 @@
          id="tspan4985"
          x="540.38538"
          y="571.13892"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#7dff78;fill-opacity:1">Jump &lt;4</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1">Jump &lt;4</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -870,14 +851,14 @@
          id="tspan4989"
          x="550.84186"
          y="571.13892"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#7fbeff;fill-opacity:1">Loop 4</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1">Loop 4</tspan></text>
     <text
        id="text4991"
        y="557.85004"
        x="642.88184"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
          y="557.85004"
          x="641.68182"
          id="tspan4993"
@@ -888,7 +869,7 @@
        x="651.34332"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#fff977;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1"
          y="557.85004"
          x="651.34332"
          id="tspan4997"
@@ -899,7 +880,7 @@
        x="642.65686"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#7dff78;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1"
          y="571.13892"
          x="641.45685"
          id="tspan5001"
@@ -915,7 +896,7 @@
        x="651.91333"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#7fbeff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1"
          y="571.13892"
          x="651.91333"
          id="tspan5005"
@@ -926,7 +907,7 @@
        x="543.4754"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
          y="624.99292"
          x="542.27539"
          id="tspan5017"
@@ -937,7 +918,7 @@
        x="550.27185"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#fff977;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1"
          y="624.99292"
          x="550.27185"
          id="tspan5021"
@@ -948,7 +929,7 @@
        x="541.58539"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#7dff78;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1"
          y="638.2818"
          x="540.38538"
          id="tspan5025"
@@ -959,7 +940,7 @@
        x="550.84186"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#7fbeff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1"
          y="638.2818"
          x="550.84186"
          id="tspan5029"
@@ -974,7 +955,7 @@
          id="tspan5033"
          x="617.03101"
          y="598.55219"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1">Loop</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1">Loop</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -985,7 +966,7 @@
          id="tspan5037"
          x="643.70398"
          y="624.99292"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Cue 4</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Cue 4</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -996,7 +977,7 @@
          id="tspan5041"
          x="651.70044"
          y="624.99292"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#fff977;fill-opacity:1">PFL</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1">PFL</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1007,7 +988,7 @@
          id="tspan5045"
          x="641.81396"
          y="638.2818"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#7dff78;fill-opacity:1">Jump &gt;16</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1">Jump &gt;16</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1018,7 +999,7 @@
          id="tspan5049"
          x="652.27045"
          y="638.2818"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#7fbeff;fill-opacity:1">Jump &gt;1</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1">Jump &gt;1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1029,14 +1010,14 @@
          id="tspan5053"
          x="547.17834"
          y="389.99579"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:center;letter-spacing:-1.20000005px;text-anchor:middle;fill:#ffffff;fill-opacity:1">Bend </tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:center;letter-spacing:-1.2px;text-anchor:middle;fill:#ffffff;fill-opacity:1">Bend </tspan></text>
     <text
        id="text5055"
        y="486.27866"
        x="519.1897"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
          y="486.27866"
          x="517.98969"
          id="tspan5057"
@@ -1047,7 +1028,7 @@
        x="574.10962"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#fff977;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1"
          y="488.04794"
          x="574.10962"
          id="tspan5061"
@@ -1058,30 +1039,19 @@
        x="536.19519"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#7dff78;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1"
          y="497.88132"
          x="534.99518"
          id="tspan5065"
          sodipodi:role="line">Key</tspan></text>
     <text
-       id="text5067"
-       y="498.26013"
-       x="549.73804"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#7fbeff;fill-opacity:1"
-         y="498.26013"
-         x="549.73804"
-         sodipodi:role="line"
-         id="tspan5069">Grid </tspan></text>
-    <text
        id="text5071"
-       y="505.46844"
+       y="504.72894"
        x="542.45026"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.69999999px;fill:#7fbeff;fill-opacity:1"
-         y="505.46844"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.7px;fill:#7fbeff;fill-opacity:1"
+         y="504.72894"
          x="542.45026"
          sodipodi:role="line"
          id="tspan5073">⤓Quantize</tspan></text>
@@ -1102,7 +1072,7 @@
        x="557.70667"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.67000002px;fill:#ffffff;fill-opacity:1"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.67px;fill:#ffffff;fill-opacity:1"
          y="393.73566"
          x="557.70667"
          sodipodi:role="line"
@@ -1113,7 +1083,7 @@
        x="746.01099"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
          y="557.85004"
          x="744.81097"
          id="tspan5089"
@@ -1124,7 +1094,7 @@
        x="752.80743"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#fff977;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1"
          y="557.85004"
          x="752.80743"
          id="tspan5093"
@@ -1135,7 +1105,7 @@
        x="744.12097"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#7dff78;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1"
          y="571.13892"
          x="742.92096"
          id="tspan5097"
@@ -1146,7 +1116,7 @@
        x="753.37744"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#7fbeff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1"
          y="571.13892"
          x="753.37744"
          id="tspan5101"
@@ -1161,7 +1131,7 @@
          id="tspan5105"
          x="844.21741"
          y="557.85004"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Cue 2</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Cue 2</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1172,7 +1142,7 @@
          id="tspan5109"
          x="853.87891"
          y="557.85004"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#fff977;fill-opacity:1">Sync</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1">Sync</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1183,7 +1153,7 @@
          id="tspan5113"
          x="843.99243"
          y="571.13892"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#7dff78;fill-opacity:1">Jump &gt;4</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1">Jump &gt;4</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1194,7 +1164,7 @@
          id="tspan5117"
          x="854.44891"
          y="571.13892"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#7fbeff;fill-opacity:1">Loop 16</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1">Loop 16</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1205,7 +1175,7 @@
          id="tspan5129"
          x="744.81097"
          y="624.99292"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Cue 3</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Cue 3</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1216,7 +1186,7 @@
          id="tspan5133"
          x="752.80743"
          y="624.99292"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#fff977;fill-opacity:1">Play</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1">Play</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1227,7 +1197,7 @@
          id="tspan5137"
          x="742.92096"
          y="638.2818"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#7dff78;fill-opacity:1">Jump &lt;16</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1">Jump &lt;16</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1238,14 +1208,14 @@
          id="tspan5141"
          x="753.37744"
          y="638.2818"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#7fbeff;fill-opacity:1">Jump &lt;1</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1">Jump &lt;1</tspan></text>
     <text
        id="text5143"
        y="598.55219"
        x="820.7666"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1"
          y="598.55219"
          x="819.56659"
          id="tspan5145"
@@ -1256,7 +1226,7 @@
        x="847.43958"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
          y="624.99292"
          x="846.23956"
          id="tspan5149"
@@ -1267,7 +1237,7 @@
        x="854.23602"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#fff977;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1"
          y="624.99292"
          x="854.23602"
          id="tspan5153"
@@ -1278,7 +1248,7 @@
        x="845.54956"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#7dff78;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1"
          y="638.2818"
          x="844.34955"
          id="tspan5157"
@@ -1289,7 +1259,7 @@
        x="854.80603"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#7fbeff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1"
          y="638.2818"
          x="854.80603"
          id="tspan5161"
@@ -1300,7 +1270,7 @@
        x="749.44916"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:center;letter-spacing:-1.20000005px;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:center;letter-spacing:-1.2px;text-anchor:middle;fill:#ffffff;fill-opacity:1"
          y="389.99579"
          x="749.71399"
          id="tspan5165"
@@ -1315,7 +1285,7 @@
          id="tspan5169"
          x="720.52527"
          y="486.27866"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Rate</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Rate</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1326,7 +1296,7 @@
          id="tspan5173"
          x="777.44873"
          y="487.6908"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#fff977;fill-opacity:1">Seek</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1">Seek</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1337,29 +1307,18 @@
          id="tspan5177"
          x="737.53076"
          y="497.88132"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#7dff78;fill-opacity:1">Key</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="752.27368"
-       y="498.26013"
-       id="text5179"><tspan
-         id="tspan5181"
-         sodipodi:role="line"
-         x="752.27368"
-         y="498.26013"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#7fbeff;fill-opacity:1">Grid </tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1">Key</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="744.9859"
-       y="505.46844"
+       y="504.72894"
        id="text5183"><tspan
          id="tspan5185"
          sodipodi:role="line"
          x="744.9859"
-         y="505.46844"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.69999999px;fill:#7fbeff;fill-opacity:1">⤓Quantize</tspan></text>
+         y="504.72894"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.7px;fill:#7fbeff;fill-opacity:1">⤓Quantize</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1381,7 +1340,7 @@
          sodipodi:role="line"
          x="760.24225"
          y="393.73566"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.67000002px;fill:#ffffff;fill-opacity:1">⤓Scratch</tspan></text>
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.67px;fill:#ffffff;fill-opacity:1">⤓Scratch</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1392,7 +1351,7 @@
          id="tspan5779"
          x="312.33112"
          y="537.47028"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1">crush</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1">crush</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1403,14 +1362,14 @@
          id="tspan5799"
          x="109.83113"
          y="524.84338"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1">Bit-</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1">Bit-</tspan></text>
     <text
        id="text5801"
        y="531.40936"
        x="212.73929"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1"
          y="531.40936"
          x="211.53929"
          id="tspan5803"
@@ -1421,7 +1380,7 @@
        x="110.13278"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1"
          y="598.55219"
          x="108.93279"
          id="tspan5807"
@@ -1432,7 +1391,7 @@
        x="111.03113"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1"
          y="537.47028"
          x="109.83113"
          id="tspan5811"
@@ -1443,7 +1402,7 @@
        x="516.03113"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1"
          y="524.84338"
          x="514.83112"
          id="tspan5815"
@@ -1458,7 +1417,7 @@
          id="tspan5819"
          x="616.53925"
          y="531.40936"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1">Delay</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1">Delay</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1469,7 +1428,7 @@
          id="tspan5823"
          x="513.93274"
          y="598.55219"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1">Reverb</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1">Reverb</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1480,7 +1439,7 @@
          id="tspan5827"
          x="514.83112"
          y="537.47028"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1">crush</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1">crush</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1491,14 +1450,14 @@
          id="tspan5831"
          x="718.04541"
          y="524.84338"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1">Bit-</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1">Bit-</tspan></text>
     <text
        id="text5833"
        y="531.40936"
        x="820.95355"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1"
          y="531.40936"
          x="819.75354"
          id="tspan5835"
@@ -1509,7 +1468,7 @@
        x="718.34705"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1"
          y="598.55219"
          x="717.14703"
          id="tspan5839"
@@ -1520,7 +1479,7 @@
        x="719.24542"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1"
          y="537.47028"
          x="718.04541"
          id="tspan5843"
@@ -1535,14 +1494,14 @@
          id="tspan5857"
          x="211.13316"
          y="598.55219"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.20000005px;text-anchor:end;fill:#ffffff;fill-opacity:1">Loop</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1">Loop</tspan></text>
     <text
        id="text5859"
        y="487.6908"
        x="878.96906"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#fff977;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1"
          y="487.6908"
          x="878.96906"
          id="tspan5861"
@@ -1553,7 +1512,7 @@
        x="667.84662"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.67000002px;fill:#ffffff;fill-opacity:1"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.67px;fill:#ffffff;fill-opacity:1"
          y="392.03925"
          x="667.84662"
          sodipodi:role="line"
@@ -1568,18 +1527,40 @@
          sodipodi:role="line"
          x="670.63196"
          y="399.63705"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.67000002px;fill:#ffffff;fill-opacity:1">preview</tspan></text>
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.67px;fill:#ffffff;fill-opacity:1">preview</tspan></text>
     <text
        id="text5859-6"
        y="497.91348"
        x="869.02545"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.20000005px;fill:#fff977;fill-opacity:1;stroke-width:1px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1;stroke-width:1px"
          y="497.91348"
          x="869.02545"
          id="tspan5861-8"
          sodipodi:role="line">preview</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.5px;line-height:1.25;font-family:ETBembo;-inkscape-font-specification:'ETBembo, Normal';stroke-width:0.9375"
+       x="710.55774"
+       y="776.12512"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="stroke-width:0.9375"
+         x="710.55774"
+         y="776.12512">- Move &quot;Grid&quot; to lower encoder</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="800.85736"
+       y="490.44226"
+       id="text2"><tspan
+         id="tspan2"
+         sodipodi:role="line"
+         x="800.85736"
+         y="490.44226"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-0.7px;fill:#ffcccc;fill-opacity:1">⤓Library</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"

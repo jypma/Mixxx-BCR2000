@@ -2,6 +2,7 @@
 
 TODO:
   - Stopping an FX resets it, can't reenable again
+  - Automatically small decks when browsing
 
 New buttons:
   - Switch BitCrusher to metronome:  [EqualizerRack1_[ChannelI]]chain_selector switch EQ to metronome?
@@ -9,6 +10,8 @@ New buttons:
   - OR move Echo down 1 effect: [EffectRack1_EffectUnitN_EffectM]effect_selector
 
   - Cue points 5 and 6
+  - Move all jumps to the new 2 buttons, and introduce cue points 5, 6, 7 and 8 under a new Shift.
+    > 2 buttons (left, right): Press is jump 16, shift has jump 4, jump 1
   - Move over Beat jump 1 (perhaps)
   - Move Quantize there (no good under the push encoder for gridding, that' setup)
 
@@ -27,7 +30,7 @@ function getCfg(key, group) {
   var keyInfo = {
     rate: { minimum: -1, maximum: 1, step: 0.001 },
     jog: { minimum: -3, maximum: 3, step: 0.1, accellerationLimit: 30, accelleration: 1.5 },
-    playposition: { step: 0.00003, accellerationLimit: 500, accelleration: 1.4 },
+    playposition: { step: 0.001, accellerationLimit: 8, accelleration: 1.4 },
     beats_translate: { step: 0.2, accelleration: 1, up: "beats_translate_later", down: "beats_translate_earlier"},
     pitch: { minimum: -6, maximum: 6, step: 0.01, accelleration: 1.1 },
     scratch: { step: 1, accelleration: 2, accellerationLimit: 4 },
@@ -37,7 +40,8 @@ function getCfg(key, group) {
     loop_factor2: { step: 1, accelleration: 0, up: "loop_double", down: "loop_halve" },
     headVolume: { maximum: 5 },
     headMix: { minimum: -1, maximum: 1, step: 0.03 },
-    SelectTrackKnob: { minimum: -25, maximum: 25, step: 1, accelleration: 1.3, accellerationLimit: 16, reset: true },
+    bpm: { minimum: 80, maximum: 180, step: 0.01, accellerationLimit: 8 },
+    SelectTrackKnob: { minimum: -25, maximum: 25, step: 1, accelleration: 1.1, accellerationLimit: 64, reset: true },
   };
 
   var groupInfo = {
@@ -66,7 +70,7 @@ function resolveGroupFn(groupFn) {
 // This wraps the handling code for a BCR2000 encoder set to "Rel2" mode
 // @param key Mixxx control key to bind to, required
 // @param groupFn Transformation to apply to group string
-function encoder(key, groupFn) {
+function encoder(key, groupFn, onChange) {
     groupFn = resolveGroupFn(groupFn);
 
     var cfg = getCfg(key, groupFn("X"));
@@ -74,6 +78,9 @@ function encoder(key, groupFn) {
     var lastMsg = 0;
     
     return function (channel, control, value, status, group) {
+        if (onChange) { onChange(value, group); }
+        group = groupFn(group);
+
         if ((new Date().getTime()) - lastMsg < 100) {
             accel = accel * cfg.accelleration;
             if (accel > cfg.accellerationLimit) {
@@ -85,7 +92,6 @@ function encoder(key, groupFn) {
         
         lastMsg = new Date().getTime();
         var delta = (value > 64) ? cfg.step : -cfg.step;
-        group = groupFn(group);
         if (key == "scratch") { // scratch must be done through JS...for some reason
           var deck = group[8] - '1' + 1;
           script.midiDebug(0, 0, value, 0, "scratch: " + delta * accel);
@@ -104,26 +110,23 @@ function encoder(key, groupFn) {
           var v = engine.getValue(group, key) + delta * accel;
           if (v < cfg.minimum) v = cfg.minimum;
           if (v > cfg.maximum) v = cfg.maximum;
-          script.midiDebug(0, 0, v, 0, "writing value to " + group + ":" + key + "=" + v + " accel=" + accel);
+          //script.midiDebug(0, 0, v, 0, "writing value to " + group + ":" + key + "=" + v + " accel=" + accel);
           engine.setValue(group, key, v);
         } else {
           var vOld = engine.getParameter(group, key);
           var v = vOld + delta * accel;
           if (cfg.stopAtMiddle) {
-            print("m")
             if (vOld < 0.5 && v > 0.5) {
-              print("<")
               v = 0.5;
               accel = 0;
             } else if (vOld > 0.5 && v < 0.5) {
-              print(">")
               v = 0.5;
               accel = 0;
             }
           }
           if (v < 0) v = 0;
           if (v > 1) v = 1;
-          script.midiDebug(0, 0, v, 0, "writing param to " + group + ":" + key + "=" + v + " accel=" + accel);
+          //script.midiDebug(0, 0, v, 0, "writing param to " + group + ":" + key + "=" + v + " accel=" + accel);
           engine.setParameter(group, key, v);
         }
         
@@ -133,25 +136,27 @@ function encoder(key, groupFn) {
     };
 }
 
-function buttonHold(key, groupFn) {
+function buttonHold(key, groupFn, onChange) {
     groupFn = resolveGroupFn(groupFn);
     if (key == "scratch_enable") { // scratch has to be done through JS...for some reason
         return function (channel, control, value, status, group) {
             var deck = group[8] - '1' + 1;
             if (value > 0) {
-              var alpha = 0.01;
-              var beta = alpha/16;
-              engine.setValue(group, "slip_enabled", true);
-              engine.scratchEnable(deck, 64, 33+1/3, alpha, beta);
+              var alpha = 0.125;
+              var beta = alpha/96;
+              //engine.setValue(group, "slip_enabled", true);
+              engine.scratchEnable(deck, 24, 33+1/3, alpha, beta, true);
             } else {
-              engine.scratchDisable(deck);        
-              engine.setValue(group, "slip_enabled", false);
+              engine.scratchDisable(deck, true);
+              //engine.setValue(group, "slip_enabled", false);
             }
         }
     } else {
-        return function (channel, control, value, status, group) {
-            engine.setValue(groupFn(group), key, value > 0);
-        };
+      return function (channel, control, value, status, group) {
+        if (onChange) onChange(value, group);
+        script.midiDebug(0, 0, value, 0, "" + group + ", " + groupFn + ", " + groupFn(group) + " / " + key);
+        engine.setValue(groupFn(group), key, value > 0);
+      };
     }
 }
 
@@ -160,7 +165,6 @@ function buttonReset(values, groupFn) {
   return function (channel, control, value, status, group) {
     group = groupFn(group);
     if (value > 0) {
-      print("TODO");
     } else {
       for (key in values) {
         print("Reset " + group + " / " + key + " to " + values[key]);
@@ -247,25 +251,26 @@ function Shifter(levels) {
     // Should be bound to a button that emits the given value when held down,
     // returning to levels[0] when released.
     // In other words, holding the button sets the shifter to [targetValue] temporarily.
-    this.holdFor = function(targetValue) {
-        return function (channel, control, value, status, group) {
-            var i = pressed.indexOf(targetValue);
-            if (i != -1) {
-                pressed.splice(i, 1);
-            }
-            script.midiDebug(channel, control, value, status, "pressed=" + pressed + " i=" + i); 
-            if (value > 0) {
-                pressed.push(targetValue);
-                switchTo(targetValue);
-            } else {
-                if (pressed.length > 0) {
-                    switchTo(pressed[pressed.length - 1]);
-                } else {
-                    switchTo(levels[0]);
-                }                
-            }
-        };  
+  this.holdFor = function(targetValue, onChange) {
+    return function (channel, control, value, status, group) {
+      var i = pressed.indexOf(targetValue);
+      if (i != -1) {
+        pressed.splice(i, 1);
+      }
+      script.midiDebug(channel, control, value, status, "pressed=" + pressed + " i=" + i);
+      if (onChange) { onChange(value); }
+      if (value > 0) {
+        pressed.push(targetValue);
+        switchTo(targetValue);
+      } else {
+        if (pressed.length > 0) {
+          switchTo(pressed[pressed.length - 1]);
+        } else {
+          switchTo(levels[0]);
+        }
+      }
     };
+  };
     
     // Shortcut for holdFor("on"), for a default Shifter with [ "off", "on" ]
     this.hold = function() { return this.holdFor("on"); }
@@ -299,13 +304,12 @@ function Shifter(levels) {
 
   function onControlChange(mididata, route) {
     return function() {
-      print("onControlChange")
       var values = [];
       for (i in route.multi) {
         var group = route.multi[i].group;
         var key = route.multi[i].key;
         var v = engine.getParameter(group, key);
-        print("  " + group + " / " + key + " = " + v);
+        //print("  " + group + " / " + key + " = " + v);
         values.push(v);
       }
 
@@ -383,6 +387,14 @@ function Control(key) {
 }
 
 var BCR2000 = (function () {
+  var resetShiftFX = new Set();
+  function shiftToMetronome(value, group) {
+    // Switch effect 1 to metronome when adjusting beat grid
+    group = channelFx(1)(group);
+    selectFX(group, 15);
+    resetShiftFX.add(group);
+  }
+
   // We use this as mapping for button LEDs in shift states that don't have output,
   // so the button is always OFF there (since we don't use mute)
   function alwaysOff(group) { return { group: group, key:"mute" } };
@@ -393,7 +405,7 @@ var BCR2000 = (function () {
         var deck = group[8] - '1' + 1;
         return "[EffectRack1_EffectUnit" + deck + "]";
     }
-    
+
     function channelFx(fxNum) {
         return function(group) {
             var deck = group[8] - '1' + 1;
@@ -401,14 +413,11 @@ var BCR2000 = (function () {
         };
     }
 
-    function selectFX(group, num) {
-        engine.setValue(group, "clear", true);
-        engine.setValue(group, "clear", false);
-        for (var i = 0; i < num; i++){ 
-            engine.setValue(group, "next_effect", true);
-            engine.setValue(group, "next_effect", false);
-        }
+  function selectFX(group, num) {
+    if (engine.getValue(group, "loaded_effect") != num) {
+      engine.setValue(group, "loaded_effect", num);
     }
+  }
 
     var shift1 = new Shifter(["o","a","b","c","d"]);
     var scratch_enable = new Control("scratch_enable");
@@ -590,8 +599,8 @@ var BCR2000 = (function () {
               engine.setValue("[EffectRack1_EffectUnit" + i + "_Effect2]", "enabled", true);
               engine.setValue("[EffectRack1_EffectUnit" + i + "_Effect3]", "enabled", true);
               selectFX("[EffectRack1_EffectUnit" + i + "_Effect1]", 5);
-              selectFX("[EffectRack1_EffectUnit" + i + "_Effect2]", 8);
-              selectFX("[EffectRack1_EffectUnit" + i + "_Effect3]", 18);
+              selectFX("[EffectRack1_EffectUnit" + i + "_Effect2]", 9);
+              selectFX("[EffectRack1_EffectUnit" + i + "_Effect3]", 20);
           }
         },
         shutdown: function() {},
@@ -599,17 +608,24 @@ var BCR2000 = (function () {
         shiftA: shift1.holdFor("a"),
         shiftB: shift1.holdFor("b"),
         shiftC: shift1.holdFor("c"),
-        shiftD: shift1.holdFor("d"),
+      shiftD: shift1.holdFor("d", function(value) {
+        if (value == 0) {
+          // Reset FX back to Bitcrusher
+          for (const group of resetShiftFX) {
+            selectFX(group, 5);
+          }
+          resetShiftFX.clear();
+        }
+      }),
         
         pushEncoder1: shift1.map({
-            o: scratch_enable.map({
+            o: scratch_enable.map({ // TODO test activate slip mode while scratching?
                 off: encoder("jog"),
                  on: encoder("scratch")
             }),
             a: encoder("rate"),
             b: encoder("playposition"),
-            c: encoder("pitch"),
-            d: encoder("beats_translate")
+            c: encoder("pitch")
         }),
         pushEncoder1Btn: shift1.map({
             o: buttonHold("scratch_enable"), 
@@ -622,7 +638,9 @@ var BCR2000 = (function () {
       button1: shift1.map({
         o: buttonReset({ "parameter1": 1.0, "parameter2": 1.0 }, channelFx(1)),
         a: buttonHold("hotcue_1_activate"),
-        b: buttonHold("LoadSelectedTrack"),
+        b: buttonHold("LoadSelectedTrack", undefined, function() {
+          engine.setValue("[Skin]", "show_maximized_library", false);
+        }),
         c: buttonHold("beatjump_4_backward"),
         d: buttonHold("beatloop_4_activate")
       }),
@@ -657,7 +675,8 @@ var BCR2000 = (function () {
           o: encoder("parameter3", eqForChannel), // high
           a: encoder("parameter1", channelFx(1)), // bc depth
           b: encoder("parameter4", channelFx(2)), // echo send
-          c: encoder("parameter4", channelFx(3))   // reverb send
+          c: encoder("parameter4", channelFx(3)),   // reverb send
+          d: encoder("beats_translate", undefined, shiftToMetronome)
         }),
         encoder3: shift1.map({
             o: encoder("super1", filterForChannel),
@@ -667,7 +686,8 @@ var BCR2000 = (function () {
           o: encoder("parameter2", eqForChannel), // mid
           a: encoder("parameter2", channelFx(1)), // bc sample rate
           b: encoder("parameter1", channelFx(2)), // echo time/delay
-          c: encoder("parameter1", channelFx(3))  // reverb decay
+          c: encoder("parameter1", channelFx(3)), // reverb decay
+          d: encoder("bpm", undefined, shiftToMetronome)
         }),
         encoder5: encoder("mix", fxChainForChannel),
         encoder6: shift1.map({
@@ -678,8 +698,12 @@ var BCR2000 = (function () {
         globalPushEncoder1: shift1.map({
             o: encoder("volume", "[Master]")
         }),
+        globalPushEncoder1Btn: shift1.map({
+        }),
         globalPushEncoder2: shift1.map({
             o: encoder("headVolume", "[Master]")        
+        }),
+        globalPushEncoder2Btn: shift1.map({
         }),
         globalPushEncoder3: shift1.map({
             o: encoder("headMix", "[Master]")                
@@ -688,11 +712,12 @@ var BCR2000 = (function () {
             o: buttonHold("stop", "[PreviewDeck1]")
         }),
         globalPushEncoder4: shift1.map({
-            o: encoder("SelectTrackKnob", "[Playlist]"),
-            b: encoder("playposition", "[PreviewDeck1]")
+          o: encoder("SelectTrackKnob", "[Playlist]"),
+          b: encoder("playposition", "[PreviewDeck1]")
         }),
         globalPushEncoder4Btn: shift1.map({
-            o: buttonToggle("LoadSelectedTrackAndPlay", "[PreviewDeck1]") // TODO stop if playing same
+          o: buttonToggle("LoadSelectedTrackAndPlay", "[PreviewDeck1]"), // TODO stop if playing same
+          a: buttonToggle("show_maximized_library", "[Skin]")
         })
         
     };
