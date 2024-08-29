@@ -25,11 +25,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.6168704"
-     inkscape:cx="392.07138"
-     inkscape:cy="390.35177"
+     inkscape:zoom="1.9331209"
+     inkscape:cx="360.03957"
+     inkscape:cy="405.30316"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer3"
      showgrid="false"
      showguides="false"
      inkscape:guide-bbox="true"
@@ -65,7 +65,7 @@
        x="83.864944"
        y="64.355896" />
     <rect
-       style="opacity:1;fill:#583b00;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#412c00;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4561"
        width="203.54573"
        height="496.48999"
@@ -89,7 +89,7 @@
        id="rect4565"
        style="opacity:1;fill:#6e005e;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <rect
-       style="opacity:1;fill:#475e00;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#00551e;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4567"
        width="203.54573"
        height="496.48999"
@@ -1319,6 +1319,50 @@
          x="853.78833"
          sodipodi:role="line"
          id="tspan8">BPM</tspan></text>
+    <text
+       id="text9"
+       y="748.72345"
+       x="140.68689"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:center;letter-spacing:-1.2px;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+         y="748.72345"
+         x="140.08688"
+         id="tspan9"
+         sodipodi:role="line">FX Dry/Wet</tspan></text>
+    <text
+       id="text10"
+       y="748.72345"
+       x="343.00897"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:center;letter-spacing:-1.2px;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+         y="748.72345"
+         x="342.40897"
+         id="tspan10"
+         sodipodi:role="line">FX Dry/Wet</tspan></text>
+    <text
+       id="text11"
+       y="748.72345"
+       x="548.83795"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:center;letter-spacing:-1.2px;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+         y="748.72345"
+         x="548.23798"
+         id="tspan11"
+         sodipodi:role="line">FX Dry/Wet</tspan></text>
+    <text
+       id="text12"
+       y="748.72345"
+       x="751.02399"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:center;letter-spacing:-1.2px;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+         y="748.72345"
+         x="750.42401"
+         id="tspan12"
+         sodipodi:role="line">FX Dry/Wet</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"

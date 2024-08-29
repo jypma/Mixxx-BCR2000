@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4.6746854"
-     inkscape:cx="720.04845"
-     inkscape:cy="138.29808"
+     inkscape:zoom="1.6994528"
+     inkscape:cx="455.44071"
+     inkscape:cy="341.58053"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -81,28 +81,28 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccccccccc" />
     <rect
-       style="opacity:1;fill:#0064de;fill-opacity:1;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#0064de;fill-opacity:1;stroke:#000000;stroke-width:0.354331;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4532"
        width="21.213203"
        height="26.263966"
        x="116.63418"
        y="366.83588" />
     <rect
-       style="opacity:1;fill:#de9400;fill-opacity:1;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#de9400;fill-opacity:1;stroke:#000000;stroke-width:0.354331;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4532-9"
        width="21.213203"
        height="26.263966"
        x="146.43367"
        y="366.83588" />
     <rect
-       style="opacity:0.77999998;fill:#de00bd;fill-opacity:1;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:0.78;fill:#de00bd;fill-opacity:1;stroke:#000000;stroke-width:0.354331;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4532-9-1"
        width="21.213203"
        height="26.263966"
        x="175.7281"
        y="367.34094" />
     <rect
-       style="opacity:0.66000001;fill:#a7de00;fill-opacity:1;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:0.66;fill:#a7de00;fill-opacity:1;stroke:#000000;stroke-width:0.354331;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4532-9-1-3"
        width="21.213203"
        height="26.263966"
@@ -141,7 +141,7 @@
        inkscape:connector-curvature="0"
        id="path4853"
        d="m 394.57894,187.30876 c 0.0893,5.26786 2.32142,8.16965 6.42856,8.21429 l 79.34174,0 c 5.84821,0 7.5,3.66071 7.5,7.5 l 0.53571,127.32143 c 0,3.92857 -1.38392,5.89286 -5.89285,5.89286 l -188.37338,0 c -5.26785,-0.0446 -7.75254,-2.21683 -8.02039,-8.0204 L 285.8924,204.92548 c -0.12627,-7.07107 7.70519,-6.43968 7.70519,-14.64716 l 0.67759,-118.683841 c -0.0893,-4.91071 1.60715,-7.41071 7.27679,-7.27678 l 82.31268,0 c 7.94643,-0.0893 10.24553,1.76338 10.4241,10.06696 0.64605,33.591981 0.29019,79.328081 0.29019,112.924101 z"
-       style="fill:#583b00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.35433072;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="fill:#412c00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.35433072;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
        style="fill:#6e005e;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.35433072;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 597.11453,187.30876 c 0.0893,5.26786 2.32142,8.16965 6.42856,8.21429 l 79.87745,0 c 5.84821,0 7.5,3.66071 7.5,7.5 l 0.53571,127.32143 c 0,3.92857 -1.38392,5.89286 -5.89285,5.89286 l -189.2879,0 c -5.26785,-0.0446 -7.5,-1.96429 -7.76785,-7.76786 l -0.83202,-126.20159 c -0.12626,-7.19733 7.98583,-5.29581 8.23837,-10.72538 L 495.29554,71.594479 c -0.0893,-4.91071 1.60715,-7.41071 7.27679,-7.27678 l 83.82791,0 c 7.94643,-0.0893 10.24553,1.76338 10.4241,10.06696 0.64605,33.591981 0.29019,79.328081 0.29019,112.924101 z"
@@ -153,7 +153,7 @@
        inkscape:connector-curvature="0"
        id="path4857"
        d="m 800.66027,187.30876 c 0.0893,5.26786 2.32142,8.16965 6.42856,8.21429 l 88.44888,0 c 5.84821,0 7.5,3.66071 7.5,7.5 l 0.53571,127.32143 c 0,3.92857 -1.38392,5.89286 -5.89285,5.89286 l -198.3644,0 c -5.26785,-0.0446 -7.87881,-0.76474 -7.83099,-6.31577 l -0.54232,-125.88351 c -0.12627,-6.9448 7.39967,-6.16368 7.39967,-11.18567 l 0.49875,-121.257911 c -0.0893,-4.91071 1.60715,-7.41071 7.27679,-7.27678 l 83.82791,0 c 7.94643,-0.0893 10.24553,1.76338 10.4241,10.06696 0.64605,33.591981 0.29019,79.328081 0.29019,112.924101 z"
-       style="fill:#485e00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.35433072;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="fill:#00551e;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.35433072;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
        style="opacity:1;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4477"
@@ -288,45 +288,45 @@
          sodipodi:role="line">Loop 16</tspan></text>
     <text
        id="text4336"
-       y="624.99292"
+       y="629.40601"
        x="138.9093"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
-         y="624.99292"
+         y="629.40601"
          x="137.7093"
          id="tspan4338"
          sodipodi:role="line">Cue 3</tspan></text>
     <text
        id="text4340"
-       y="624.99292"
+       y="629.40601"
        x="145.70575"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1"
-         y="624.99292"
+         y="629.40601"
          x="145.70575"
          id="tspan4342"
          sodipodi:role="line">Play</tspan></text>
     <text
        id="text4344"
-       y="638.2818"
+       y="642.69489"
        x="137.0193"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1"
-         y="638.2818"
+         y="642.69489"
          x="135.81931"
          id="tspan4346"
          sodipodi:role="line">Jump &lt;16</tspan></text>
     <text
        id="text4348"
-       y="638.2818"
+       y="642.69489"
        x="146.27576"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1"
-         y="638.2818"
+         y="642.69489"
          x="146.27576"
          id="tspan4350"
          sodipodi:role="line">Jump &lt;1</tspan></text>
@@ -334,45 +334,45 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="240.33786"
-       y="624.99292"
+       y="629.40601"
        id="text4374"><tspan
          sodipodi:role="line"
          id="tspan4376"
          x="239.13786"
-         y="624.99292"
+         y="629.40601"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Cue 4</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="247.13431"
-       y="624.99292"
+       y="629.40601"
        id="text4378"><tspan
          sodipodi:role="line"
          id="tspan4380"
          x="247.13431"
-         y="624.99292"
+         y="629.40601"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1">PFL</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="238.44788"
-       y="638.2818"
+       y="642.69489"
        id="text4382"><tspan
          sodipodi:role="line"
          id="tspan4384"
          x="237.24788"
-         y="638.2818"
+         y="642.69489"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1">Jump &gt;16</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="247.70432"
-       y="638.2818"
+       y="642.69489"
        id="text4386"><tspan
          sodipodi:role="line"
          id="tspan4388"
          x="247.70432"
-         y="638.2818"
+         y="642.69489"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1">Jump &gt;1</tspan></text>
     <text
        xml:space="preserve"
@@ -625,109 +625,109 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="312.63278"
-       y="598.55219"
+       y="602.41364"
        id="text4899"><tspan
          sodipodi:role="line"
          id="tspan4901"
          x="311.43277"
-         y="598.55219"
+         y="602.41364"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1">Reverb</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="340.43472"
-       y="624.99292"
+       y="629.40601"
        id="text4903"><tspan
          sodipodi:role="line"
          id="tspan4905"
          x="339.23471"
-         y="624.99292"
+         y="629.40601"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Cue 3</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="347.23117"
-       y="624.99292"
+       y="629.40601"
        id="text4907"><tspan
          sodipodi:role="line"
          id="tspan4909"
          x="347.23117"
-         y="624.99292"
+         y="629.40601"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1">Play</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="338.54471"
-       y="638.2818"
+       y="642.69489"
        id="text4911"><tspan
          sodipodi:role="line"
          id="tspan4913"
          x="337.3447"
-         y="638.2818"
+         y="642.69489"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1">Jump &lt;16</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="347.80118"
-       y="638.2818"
+       y="642.69489"
        id="text4915"><tspan
          sodipodi:role="line"
          id="tspan4917"
          x="347.80118"
-         y="638.2818"
+         y="642.69489"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1">Jump &lt;1</tspan></text>
     <text
        id="text4919"
-       y="598.55219"
+       y="602.41364"
        x="415.19031"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1"
-         y="598.55219"
+         y="602.41364"
          x="413.9903"
          id="tspan4921"
          sodipodi:role="line">Loop</tspan></text>
     <text
        id="text4923"
-       y="624.99292"
+       y="629.40601"
        x="441.86328"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
-         y="624.99292"
+         y="629.40601"
          x="440.66327"
          id="tspan4925"
          sodipodi:role="line">Cue 4</tspan></text>
     <text
        id="text4927"
-       y="624.99292"
+       y="629.40601"
        x="448.65973"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1"
-         y="624.99292"
+         y="629.40601"
          x="448.65973"
          id="tspan4929"
          sodipodi:role="line">PFL</tspan></text>
     <text
        id="text4931"
-       y="638.2818"
+       y="642.69489"
        x="439.9733"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1"
-         y="638.2818"
+         y="642.69489"
          x="438.77328"
          id="tspan4933"
          sodipodi:role="line">Jump &gt;16</tspan></text>
     <text
        id="text4935"
-       y="638.2818"
+       y="642.69489"
        x="449.22974"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1"
-         y="638.2818"
+         y="642.69489"
          x="449.22974"
          id="tspan4937"
          sodipodi:role="line">Jump &gt;1</tspan></text>
@@ -903,45 +903,45 @@
          sodipodi:role="line">Loop 16</tspan></text>
     <text
        id="text5015"
-       y="624.99292"
+       y="629.40601"
        x="543.4754"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
-         y="624.99292"
+         y="629.40601"
          x="542.27539"
          id="tspan5017"
          sodipodi:role="line">Cue 3</tspan></text>
     <text
        id="text5019"
-       y="624.99292"
+       y="629.40601"
        x="550.27185"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1"
-         y="624.99292"
+         y="629.40601"
          x="550.27185"
          id="tspan5021"
          sodipodi:role="line">Play</tspan></text>
     <text
        id="text5023"
-       y="638.2818"
+       y="642.69489"
        x="541.58539"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1"
-         y="638.2818"
+         y="642.69489"
          x="540.38538"
          id="tspan5025"
          sodipodi:role="line">Jump &lt;16</tspan></text>
     <text
        id="text5027"
-       y="638.2818"
+       y="642.69489"
        x="550.84186"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1"
-         y="638.2818"
+         y="642.69489"
          x="550.84186"
          id="tspan5029"
          sodipodi:role="line">Jump &lt;1</tspan></text>
@@ -949,56 +949,56 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="618.23102"
-       y="598.55219"
+       y="602.41364"
        id="text5031"><tspan
          sodipodi:role="line"
          id="tspan5033"
          x="617.03101"
-         y="598.55219"
+         y="602.41364"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1">Loop</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="644.90399"
-       y="624.99292"
+       y="629.40601"
        id="text5035"><tspan
          sodipodi:role="line"
          id="tspan5037"
          x="643.70398"
-         y="624.99292"
+         y="629.40601"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Cue 4</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="651.70044"
-       y="624.99292"
+       y="629.40601"
        id="text5039"><tspan
          sodipodi:role="line"
          id="tspan5041"
          x="651.70044"
-         y="624.99292"
+         y="629.40601"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1">PFL</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="643.01398"
-       y="638.2818"
+       y="642.69489"
        id="text5043"><tspan
          sodipodi:role="line"
          id="tspan5045"
          x="641.81396"
-         y="638.2818"
+         y="642.69489"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1">Jump &gt;16</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="652.27045"
-       y="638.2818"
+       y="642.69489"
        id="text5047"><tspan
          sodipodi:role="line"
          id="tspan5049"
          x="652.27045"
-         y="638.2818"
+         y="642.69489"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1">Jump &gt;1</tspan></text>
     <text
        xml:space="preserve"
@@ -1169,98 +1169,98 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="746.01099"
-       y="624.99292"
+       y="629.40601"
        id="text5127"><tspan
          sodipodi:role="line"
          id="tspan5129"
          x="744.81097"
-         y="624.99292"
+         y="629.40601"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1">Cue 3</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="752.80743"
-       y="624.99292"
+       y="629.40601"
        id="text5131"><tspan
          sodipodi:role="line"
          id="tspan5133"
          x="752.80743"
-         y="624.99292"
+         y="629.40601"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1">Play</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="744.12097"
-       y="638.2818"
+       y="642.69489"
        id="text5135"><tspan
          sodipodi:role="line"
          id="tspan5137"
          x="742.92096"
-         y="638.2818"
+         y="642.69489"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1">Jump &lt;16</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="753.37744"
-       y="638.2818"
+       y="642.69489"
        id="text5139"><tspan
          sodipodi:role="line"
          id="tspan5141"
          x="753.37744"
-         y="638.2818"
+         y="642.69489"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1">Jump &lt;1</tspan></text>
     <text
        id="text5143"
-       y="598.55219"
+       y="602.41364"
        x="820.7666"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1"
-         y="598.55219"
+         y="602.41364"
          x="819.56659"
          id="tspan5145"
          sodipodi:role="line">Loop</tspan></text>
     <text
        id="text5147"
-       y="624.99292"
+       y="629.40601"
        x="847.43958"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffcccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffcccc;fill-opacity:1"
-         y="624.99292"
+         y="629.40601"
          x="846.23956"
          id="tspan5149"
          sodipodi:role="line">Cue 4</tspan></text>
     <text
        id="text5151"
-       y="624.99292"
+       y="629.40601"
        x="854.23602"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#fff977;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#fff977;fill-opacity:1"
-         y="624.99292"
+         y="629.40601"
          x="854.23602"
          id="tspan5153"
          sodipodi:role="line">PFL</tspan></text>
     <text
        id="text5155"
-       y="638.2818"
+       y="642.69489"
        x="845.54956"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#7dff78;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#7dff78;fill-opacity:1"
-         y="638.2818"
+         y="642.69489"
          x="844.34955"
          id="tspan5157"
          sodipodi:role="line">Jump &gt;16</tspan></text>
     <text
        id="text5159"
-       y="638.2818"
+       y="642.69489"
        x="854.80603"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:-1.2px;fill:#7fbeff;fill-opacity:1"
-         y="638.2818"
+         y="642.69489"
          x="854.80603"
          id="tspan5161"
          sodipodi:role="line">Jump &gt;1</tspan></text>
@@ -1376,12 +1376,12 @@
          sodipodi:role="line">Delay</tspan></text>
     <text
        id="text5805"
-       y="598.55219"
+       y="602.41364"
        x="110.13278"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1"
-         y="598.55219"
+         y="602.41364"
          x="108.93279"
          id="tspan5807"
          sodipodi:role="line">Reverb</tspan></text>
@@ -1422,12 +1422,12 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="515.13275"
-       y="598.55219"
+       y="602.41364"
        id="text5821"><tspan
          sodipodi:role="line"
          id="tspan5823"
          x="513.93274"
-         y="598.55219"
+         y="602.41364"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1">Reverb</tspan></text>
     <text
        xml:space="preserve"
@@ -1464,12 +1464,12 @@
          sodipodi:role="line">Delay</tspan></text>
     <text
        id="text5837"
-       y="598.55219"
+       y="602.41364"
        x="718.34705"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1"
-         y="598.55219"
+         y="602.41364"
          x="717.14703"
          id="tspan5839"
          sodipodi:role="line">Reverb</tspan></text>
@@ -1488,12 +1488,12 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="212.33316"
-       y="598.55219"
+       y="602.41364"
        id="text5855"><tspan
          sodipodi:role="line"
          id="tspan5857"
          x="211.13316"
-         y="598.55219"
+         y="602.41364"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';text-align:end;letter-spacing:-1.2px;text-anchor:end;fill:#ffffff;fill-opacity:1">Loop</tspan></text>
     <text
        id="text5859"
@@ -1541,17 +1541,6 @@
          sodipodi:role="line">preview</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:17.5px;line-height:1.25;font-family:ETBembo;-inkscape-font-specification:'ETBembo, Normal';stroke-width:0.9375"
-       x="710.55774"
-       y="776.12512"
-       id="text1"><tspan
-         sodipodi:role="line"
-         id="tspan1"
-         style="stroke-width:0.9375"
-         x="710.55774"
-         y="776.12512">- Move &quot;Grid&quot; to lower encoder</tspan></text>
-    <text
-       xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'District Pro';-inkscape-font-specification:'District Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#7fbeff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="862.45038"
        y="502.86273"
@@ -1587,140 +1576,142 @@
   <g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="Holes"
-     sodipodi:insensitive="true">
+     inkscape:label="Holes">
     <g
-       transform="translate(46.428571,-254.69629)"
-       id="g4211">
-      <g
-         transform="translate(30.304576,-475.78185)"
-         inkscape:tile-y0="817.62829"
-         inkscape:tile-x0="19.192899"
-         inkscape:tile-h="218.15191"
-         inkscape:tile-w="92.125983"
-         inkscape:tile-cy="926.71431"
-         inkscape:tile-cx="65.25589"
-         id="g4172"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
-        <circle
-           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           id="path4138"
-           cx="65.25589"
-           cy="863.69128"
-           r="45.08345" />
-        <rect
-           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           id="rect4140"
-           width="58.317383"
-           height="37.057541"
-           x="36.097198"
-           y="930.44037" />
-        <rect
-           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           id="rect4140-6"
-           width="58.317383"
-           height="37.057541"
-           x="36.097198"
-           y="997.76324" />
-      </g>
-      <use
-         height="100%"
-         width="100%"
-         id="use4195"
-         transform="translate(101.33858,-1.139349e-6)"
-         xlink:href="#g4172"
-         inkscape:tiled-clone-of="#g4172"
-         y="0"
-         x="0"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <use
-         height="100%"
-         width="100%"
-         id="use4197"
-         transform="translate(202.67716,-1.139349e-6)"
-         xlink:href="#g4172"
-         inkscape:tiled-clone-of="#g4172"
-         y="0"
-         x="0"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <use
-         height="100%"
-         width="100%"
-         id="use4199"
-         transform="translate(304.01574,-1.139349e-6)"
-         xlink:href="#g4172"
-         inkscape:tiled-clone-of="#g4172"
-         y="0"
-         x="0"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <use
-         height="100%"
-         width="100%"
-         id="use4201"
-         transform="translate(405.35432,-1.139349e-6)"
-         xlink:href="#g4172"
-         inkscape:tiled-clone-of="#g4172"
-         y="0"
-         x="0"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <use
-         height="100%"
-         width="100%"
-         id="use4203"
-         transform="translate(506.69291,-1.139349e-6)"
-         xlink:href="#g4172"
-         inkscape:tiled-clone-of="#g4172"
-         y="0"
-         x="0"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <use
-         height="100%"
-         width="100%"
-         id="use4205"
-         transform="translate(608.03149,-1.139349e-6)"
-         xlink:href="#g4172"
-         inkscape:tiled-clone-of="#g4172"
-         y="0"
-         x="0"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <use
-         height="100%"
-         width="100%"
-         id="use4207"
-         transform="translate(709.37007,-1.139349e-6)"
-         xlink:href="#g4172"
-         inkscape:tiled-clone-of="#g4172"
-         y="0"
-         x="0"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       transform="translate(76.733147,-730.47814)"
+       inkscape:tile-y0="817.62829"
+       inkscape:tile-x0="19.192899"
+       inkscape:tile-h="218.15191"
+       inkscape:tile-w="92.125983"
+       inkscape:tile-cy="926.71431"
+       inkscape:tile-cx="65.25589"
+       id="g4172"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.354331;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+      <circle
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.354331;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path4138"
+         cx="65.25589"
+         cy="863.69128"
+         r="45.08345" />
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.354331;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4140"
+         width="58.317383"
+         height="37.057541"
+         x="36.097198"
+         y="930.44037" />
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.354331;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4140-6"
+         width="58.317383"
+         height="37.057541"
+         x="36.097198"
+         y="1001.6646" />
     </g>
+    <use
+       height="100%"
+       width="100%"
+       id="use4195"
+       transform="translate(101.33858)"
+       xlink:href="#g4172"
+       inkscape:tiled-clone-of="#g4172"
+       y="0"
+       x="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.354331;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <use
+       height="100%"
+       width="100%"
+       id="use4197"
+       transform="translate(202.67716)"
+       xlink:href="#g4172"
+       inkscape:tiled-clone-of="#g4172"
+       y="0"
+       x="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.354331;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <use
+       height="100%"
+       width="100%"
+       id="use4199"
+       transform="translate(304.01574)"
+       xlink:href="#g4172"
+       inkscape:tiled-clone-of="#g4172"
+       y="0"
+       x="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.354331;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <use
+       height="100%"
+       width="100%"
+       id="use4201"
+       transform="translate(405.35432)"
+       xlink:href="#g4172"
+       inkscape:tiled-clone-of="#g4172"
+       y="0"
+       x="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.354331;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <use
+       height="100%"
+       width="100%"
+       id="use4203"
+       transform="translate(506.69291)"
+       xlink:href="#g4172"
+       inkscape:tiled-clone-of="#g4172"
+       y="0"
+       x="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.354331;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <use
+       height="100%"
+       width="100%"
+       id="use4205"
+       transform="translate(608.03149)"
+       xlink:href="#g4172"
+       inkscape:tiled-clone-of="#g4172"
+       y="0"
+       x="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.354331;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <use
+       height="100%"
+       width="100%"
+       id="use4207"
+       transform="translate(709.37007)"
+       xlink:href="#g4172"
+       inkscape:tiled-clone-of="#g4172"
+       y="0"
+       x="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.354331;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.354331;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4140-5"
        width="58.317383"
        height="37.057541"
        x="277.58484"
-       y="527.10626" />
+       y="523.79645" />
     <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.354331;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4140-6-3"
        width="58.317383"
        height="37.057541"
        x="277.58484"
-       y="594.42914" />
+       y="597.73895" />
     <rect
-       y="527.10626"
+       y="523.79645"
        x="378.92343"
        height="37.057541"
        width="58.317383"
        id="rect4467"
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.354331;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <rect
-       y="594.42914"
+       y="597.73895"
        x="378.92343"
        height="37.057541"
        width="58.317383"
        id="rect4469"
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.354331;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <ellipse
+       style="fill:#00551e;fill-opacity:1;stroke-width:7.08662"
+       id="path4"
+       cx="4.8345385"
+       cy="281.75522"
+       rx="0.87973005"
+       ry="0.32537428" />
   </g>
 </svg>
