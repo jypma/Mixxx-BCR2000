@@ -28,7 +28,7 @@ function withDefaults(settings, defaults) {
 
 function getCfg(key, group) {
   var keyInfo = {
-    rate: { minimum: -1, maximum: 1, step: 0.001 },
+    rate: { minimum: -1, maximum: 1, step: 0.001, invert: true },
     jog: { minimum: -3, maximum: 3, step: 0.1, accellerationLimit: 30, accelleration: 1.5 },
     playposition: { step: 0.001, accellerationLimit: 32, accelleration: 1.2, minInterval: 50 },
     beats_translate: { step: 0.2, accelleration: 1, up: "beats_translate_later", down: "beats_translate_earlier"},
@@ -59,7 +59,8 @@ function getCfg(key, group) {
     up: undefined,
     down: undefined,
     reset: false,
-    minInterval: undefined
+    minInterval: undefined,
+    invert: false
   }));
 }
 
@@ -103,7 +104,9 @@ function encoder(key, groupFn, onChange) {
       group = groupFn(group);
 
       lastMsg = now;
-        var delta = (value > 64) ? cfg.step : -cfg.step;
+      var delta = (value > 64) ? cfg.step : -cfg.step;
+      if (cfg.invert) { delta = -delta; }
+
         if (key == "scratch") { // scratch must be done through JS...for some reason
           var deck = group[8] - '1' + 1;
           script.midiDebug(0, 0, value, 0, "scratch: " + delta * accel);
