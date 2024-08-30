@@ -465,7 +465,12 @@ var BCR2000 = (function () {
         return (v > 0) ? 1.0 : 0.0;
       } },
       a: { group: group, key:"hotcue_2_status" },
-      b: { group: group, key:"beatsync" },
+      b: { multi: [
+        { group: group, key: "sync_mode" },
+        { group: "[App]", key: "indicator_250ms" }
+      ], compose: function(a,b) {
+        return (a <= 1) ? a : b; // Blink if sync_mode is 2 (sync leader)
+      } },
       c: alwaysOff(group),
       d: alwaysOff(group)
     };
@@ -664,7 +669,7 @@ var BCR2000 = (function () {
       button2: shift1.map({
         o: buttonReset({ "parameter4": 0.0 }, channelFx(2)),
         a: buttonHold("hotcue_2_activate"),
-        b: buttonToggle("beatsync"),
+        b: buttonToggle("sync_enabled"),
         c: buttonHold("beatjump_4_forward"),
         d: buttonHold("beatloop_16_activate")
       }),
@@ -693,7 +698,7 @@ var BCR2000 = (function () {
           a: encoder("parameter1", channelFx(1)), // bc depth
           b: encoder("parameter4", channelFx(2)), // echo send
           c: encoder("parameter4", channelFx(3)),   // reverb send
-          d: encoder("beats_translate", undefined, shiftToMetronome)
+          d: encoder("beats_translate"/*, undefined, shiftToMetronome*/)
         }),
         encoder3: shift1.map({
             o: encoder("super1", filterForChannel),
@@ -704,7 +709,7 @@ var BCR2000 = (function () {
           a: encoder("parameter2", channelFx(1)), // bc sample rate
           b: encoder("parameter1", channelFx(2)), // echo time/delay
           c: encoder("parameter1", channelFx(3)), // reverb decay
-          d: encoder("beats_adjust", undefined, shiftToMetronome)
+          d: encoder("beats_adjust"/*, undefined, shiftToMetronome*/)
         }),
         encoder5: encoder("mix", fxChainForChannel),
         encoder6: shift1.map({
