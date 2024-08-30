@@ -192,7 +192,7 @@ function buttonToggle(key, groupFn) {
         var g = groupFn(group); 
         if (value > 0) {         
             var v = engine.getValue(g, key);
-            script.midiDebug(channel, control, value, status, "v=" + v + " g=" + g); 
+            script.midiDebug(channel, control, value, status, "v=" + v + " g=" + g);
             engine.setValue(g, key, !engine.getValue(g, key));
         }
         script.midiDebug(channel, control, value, status, "exiting"); 
@@ -546,6 +546,26 @@ var BCR2000 = (function () {
         };
     }
 
+  function auxButton1Out(group) {
+    return {
+      o: alwaysOff(group),
+      a: alwaysOff(group),
+      b: alwaysOff(group),
+      c: alwaysOff(group),
+      d: alwaysOff(group)
+    };
+  }
+
+  function auxButton2Out(group) {
+    return {
+      o: alwaysOff(group),
+      a: alwaysOff(group),
+      b: alwaysOff(group),
+      c: alwaysOff(group),
+      d: alwaysOff(group)
+    };
+  }
+
     return {
         init: function (id, debugging) {
           shift1.connectCC(0x27, pushEncoder1Out("[Channel1]"));
@@ -569,7 +589,16 @@ var BCR2000 = (function () {
           shift1.connectNote(0x0D, button4Out("[Channel3]"));
           shift1.connectNote(0x0E, button3Out("[Channel4]"));
           shift1.connectNote(0x0F, button4Out("[Channel4]"));
-          
+
+          shift1.connectNote(0x50, auxButton1Out("[Channel1]"));
+          shift1.connectNote(0x51, auxButton1Out("[Channel2]"));
+          shift1.connectNote(0x52, auxButton1Out("[Channel3]"));
+          shift1.connectNote(0x53, auxButton1Out("[Channel4]"));
+          shift1.connectNote(0x46, auxButton2Out("[Channel1]"));
+          shift1.connectNote(0x47, auxButton2Out("[Channel2]"));
+          shift1.connectNote(0x48, auxButton2Out("[Channel3]"));
+          shift1.connectNote(0x49, auxButton2Out("[Channel4]"));
+
           shift1.connectCC(0x00, encoder1Out("[Channel1]"));
           shift1.connectCC(0x02, encoder1Out("[Channel2]"));
           shift1.connectCC(0x04, encoder1Out("[Channel3]"));
@@ -687,7 +716,13 @@ var BCR2000 = (function () {
             c: buttonHold("beatjump_16_forward"),
             d: buttonHold("beatjump_1_forward")
         }),
-        
+
+      auxButton1: shift1.map({
+//        d: buttonToggle("bpm_toggle_lock")
+      }),
+      auxButton2: shift1.map({
+      }),
+
         encoder1: shift1.map({
             o: encoder("volume"),
             a: encoder("pregain"),
